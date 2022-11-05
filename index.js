@@ -1,7 +1,7 @@
 function initialize() {
   var map = new google.maps.Map(document.getElementById("map_canvas"), {
-    center: new google.maps.LatLng(51.276092, 1.028938),
-    zoom: 13,
+    center: new google.maps.LatLng(38.9404, -92.3277),
+    zoom: 14,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
   });
   var directionsService = new google.maps.DirectionsService();
@@ -11,12 +11,12 @@ function initialize() {
   });
   directionsService.route(
     {
-      origin: new google.maps.LatLng(51.269776, 1.061326),
-      destination: new google.maps.LatLng(51.30118, 0.926486),
+      origin: new google.maps.LatLng(38.9404, -92.3277),
+      destination: new google.maps.LatLng(38.944716, -92.332159),
       waypoints: [
         {
           stopover: false,
-          location: new google.maps.LatLng(51.263439, 1.03489),
+          location: new google.maps.LatLng(38.946456, -92.325635),
         },
       ],
       travelMode: google.maps.TravelMode.DRIVING,
