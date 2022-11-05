@@ -263,7 +263,7 @@
     <!-- When bus routes is enabled: [left: 995px] 
          When bus routes not enabled: [left: 1250px]
     -->
-    <div id="weather" style="float: right; position: absolute; z-index: 3; top: 10px; left: 995px;">
+    <div id="weather" style="float: right; position: absolute; z-index: 3; top: 1px; left: 850px;">
         <div class="card border-warning mb-3 weathercard" style="max-width: 500px;">
             <div class="row g-4">
                 <div class="col-md-4">
@@ -272,9 +272,9 @@
             
             <div class="col-md-7">
                 
-                <div class="card-body" style="padding-top: 25%;">
-                    <h6 class="card-title">--°F</h6>
-                    <p class="card-text" style="font-size: small;">----</p>
+                <div class="card-body" style="padding-top: 20%;">
+                    <h6 class="card-title" id="temp">--°F</h6>
+                    <p class="card-text" id="desc" style="font-size: small;">----</p>
                 </div>
             </div>
             </div>
@@ -289,11 +289,11 @@
         const sidebarright = document.getElementById("sidebar2");
         if (buscheckbox.checked == false) {
           sidebarright.style.display = "none";
-          document.getElementById("weather").style.left = "1250px"
+          document.getElementById("weather").style.left = "1200px"
         }
         else {
           sidebarright.style.display = "block";
-          document.getElementById("weather").style.left = "995px"
+          document.getElementById("weather").style.left = "850px"
         }
       }
 

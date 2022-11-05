@@ -17,8 +17,8 @@ lon = '-92.3337366'
 //     return data["main"].temp
 // }
 
-let temperature = document.querySelector(".card-title")
-let desc = document.querySelector(".card-text")
+let temperature = document.getElementById("temp")   
+let desc = document.getElementById("desc")
 let image = document.querySelector(".weather-icon")
 
 window.addEventListener("load", () => {
