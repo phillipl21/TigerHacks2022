@@ -168,15 +168,15 @@ body, html {
 }
 
 .menuimg {
-    width: 150px;
-    height: 150px;
+    width: 170px;
+    height: 90px;
     margin: 0 auto;
     margin-bottom: 30px;
-    -webkit-border-radius: 50%;
-    -moz-border-radius: 50%;
-    -ms-border-radius: 50%;
-    border-radius: 50%;
-    border: 3px solid white;
+    /* -webkit-border-radius: 50%; */
+    /* -moz-border-radius: 50%; */
+    /* -ms-border-radius: 50%; */
+    /* border-radius: 50%; */
+    /* border: 3px solid white; */
 }
 
 .btn-info {
