@@ -6,6 +6,7 @@
 
 export function highlightRoutes(map) {
   /***** HEARNES LOOP 401 *****/
+  var routeSelected = false;
   var directionsService = new google.maps.DirectionsService();
   var directionsDisplay = new google.maps.DirectionsRenderer({
     map: map,
@@ -61,7 +62,6 @@ export function highlightRoutes(map) {
     },
     function (response, status) {
       if (status === google.maps.DirectionsStatus.OK) {
-        // directionsDisplay.setDirections(response);
         var polyline = new google.maps.Polyline({
           path: [],
           strokeColor: "#42BFDD",
@@ -85,14 +85,20 @@ export function highlightRoutes(map) {
         polyline.setMap(map);
         google.maps.event.addListener(polyline, "click", () => {
           console.log("Hearnes Loop 401 clicked");
+          routeSelected = true;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+            directionsDisplay.setDirections(response);
+          }
         });
-        google.maps.event.addListener(polyline, "mouseout", function () {
-          polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+        google.maps.event.addListener(polyline, "mouseout", () => {
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+            directionsDisplay.setDirections({ routes: [] });
+          }
         });
-        // showWaypoints(map, "1");
       } else {
         window.alert("Directions request failed due to " + status);
       }
@@ -135,7 +141,7 @@ export function highlightRoutes(map) {
     },
     function (response, status) {
       if (status === google.maps.DirectionsStatus.OK) {
-        // directionsDisplay.setDirections(response);
+        console.log(response);
         var polyline = new google.maps.Polyline({
           path: [],
           strokeColor: "#EC0B43",
@@ -159,12 +165,19 @@ export function highlightRoutes(map) {
         polyline.setMap(map);
         google.maps.event.addListener(polyline, "click", () => {
           console.log("Trowbridge Loop 402 clicked");
+          routeSelected = true;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+            directionsDisplay.setDirections(response);
+          }
         });
-        google.maps.event.addListener(polyline, "mouseout", function () {
-          polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+        google.maps.event.addListener(polyline, "mouseout", () => {
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+            directionsDisplay.setDirections({ routes: [] });
+          }
         });
       } else {
         window.alert("Directions request failed due to " + status);
@@ -222,7 +235,7 @@ export function highlightRoutes(map) {
     },
     function (response, status) {
       if (status === google.maps.DirectionsStatus.OK) {
-        // directionsDisplay.setDirections(response);
+        console.log(response);
         var polyline = new google.maps.Polyline({
           path: [],
           strokeColor: "#FF00FF",
@@ -246,12 +259,19 @@ export function highlightRoutes(map) {
         polyline.setMap(map);
         google.maps.event.addListener(polyline, "click", () => {
           console.log("Campus Loop 405 clicked");
+          routeSelected = true;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+            directionsDisplay.setDirections(response);
+          }
         });
-        google.maps.event.addListener(polyline, "mouseout", function () {
-          polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+        google.maps.event.addListener(polyline, "mouseout", () => {
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+            directionsDisplay.setDirections({ routes: [] });
+          }
         });
       } else {
         window.alert("Directions request failed due to " + status);
@@ -292,7 +312,7 @@ export function highlightRoutes(map) {
     },
     function (response, status) {
       if (status === google.maps.DirectionsStatus.OK) {
-        // directionsDisplay.setDirections(response);
+        console.log(response);
         var polyline = new google.maps.Polyline({
           path: [],
           strokeColor: "#58355E",
@@ -316,16 +336,28 @@ export function highlightRoutes(map) {
         polyline.setMap(map);
         google.maps.event.addListener(polyline, "click", () => {
           console.log("MU Reactor Loop 403 clicked");
+          routeSelected = true;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
+            directionsDisplay.setDirections(response);
+          }
         });
-        google.maps.event.addListener(polyline, "mouseout", function () {
-          polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+        google.maps.event.addListener(polyline, "mouseout", () => {
+          if (!routeSelected) {
+            polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+            directionsDisplay.setDirections({ routes: [] });
+          }
         });
       } else {
         window.alert("Directions request failed due to " + status);
       }
     }
   );
+
+  map.addListener("click", () => {
+    directionsDisplay.setDirections({ routes: [] });
+    routeSelected = false;
+  });
 }
