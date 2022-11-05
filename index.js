@@ -1,10 +1,10 @@
 import { highlightRoutes } from "./highlightRoutes.js";
 
 const BOUNDS = {
-  north: 38.955,
-  south: 38.935,
-  west: -92.35,
-  east: -92.3,
+  north: 38.99,
+  south: 38.89,
+  west: -92.45,
+  east: -92.2,
 };
 
 function loadMarkers(map) {
@@ -41,7 +41,7 @@ function loadMarkers(map) {
 
 function initialize() {
   var map = new google.maps.Map(document.getElementById("map_canvas"), {
-    center: new google.maps.LatLng(38.944261, -92.326639),
+    center: new google.maps.LatLng(38.940, -92.326635),
     restriction: {
       latLngBounds: BOUNDS,
       strictBounds: false,
