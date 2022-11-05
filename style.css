@@ -192,10 +192,10 @@ body, html {
 }
 
 .menuimg {
-    width: 170px;
-    height: 90px;
-    margin: 0 auto;
-    margin-bottom: 30px;
+    margin-left: 30px;
+    width: 220px;
+    height: 120px;
+    margin-bottom: 25px;
     /* -webkit-border-radius: 50%; */
     /* -moz-border-radius: 50%; */
     /* -ms-border-radius: 50%; */
@@ -273,7 +273,7 @@ input[type='checkbox']:checked + .card-container .card-flip {
 }
 
 .scrollabley {
-    max-height: 790px;
+    max-height: 100vh;
     overflow-y: scroll;
 }
 
