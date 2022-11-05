@@ -115,7 +115,10 @@
 
 
     <!-- Weather -->
-    <div style="float: right; position: absolute; z-index: 3; top: 10px; left: 1200px;">
+    <!-- When bus routes is enabled: [left: 995px] 
+         When bus routes not enabled: [left: 1250px]
+    -->
+    <div id="weather" style="float: right; position: absolute; z-index: 3; top: 10px; left: 995px;">
         <div class="card border-warning mb-3" style="max-width: 500px;">
             <div class="row g-4">
                 <div class="col-md-4">
@@ -131,7 +134,7 @@
             </div>
             </div>
         </div>
-        <script src="weather.js""></script>"
+        <script src="weather.js""></script>
     </div>
 
     <script>
@@ -141,9 +144,11 @@
         const sidebarright = document.getElementById("sidebar2");
         if (buscheckbox.checked == false) {
           sidebarright.style.display = "none";
+          document.getElementById("weather").style.left = "1250px"
         }
         else {
           sidebarright.style.display = "block";
+          document.getElementById("weather").style.left = "995px"
         }
       }
 
