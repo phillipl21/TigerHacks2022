@@ -50,17 +50,9 @@ function initialize() {
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     styles: [
       {
-        featureType: "poi.business",
+        featureType: "poi",
         stylers: [{ visibility: "off" }],
-      },
-      {
-        featureType: "poi.school",
-        stylers: [{ visibility: "off" }],
-      },
-      {
-        featureType: "poi.sports_complex",
-        stylers: [{ visibility: "off" }],
-      },
+      }
     ],
   });
 
