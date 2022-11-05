@@ -278,6 +278,6 @@ input[type='checkbox']:checked + .card-container .card-flip {
 }
 
 .weathercard {
-    width: 250px;
+    width: 200px;
     height: 100px;
 }
