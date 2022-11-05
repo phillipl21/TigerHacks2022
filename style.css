@@ -275,6 +275,7 @@ input[type='checkbox']:checked + .card-container .card-flip {
 .scrollabley {
     max-height: 100vh;
     overflow-y: scroll;
+    overflow-x:hidden;
 }
 
 .weathercard {
