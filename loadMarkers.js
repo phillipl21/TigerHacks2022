@@ -1,16 +1,22 @@
 export function loadMarkers(map) {
     const iconBase =
-      "https://developers.google.com/maps/documentation/javascript/examples/full/images/";
+      "./icons/";
   
     const icons = {
       parking: {
-        icon: iconBase + "parking_lot_maps.png",
+        icon: iconBase + "parking2.png",
       },
       library: {
-        icon: iconBase + "library_maps.png",
+        icon: iconBase + "book1.png",
       },
-      info: {
-        icon: iconBase + "info-i_maps.png",
+      food: {
+        icon: iconBase + "utensils1.png",
+      },
+      person: {
+        icon: iconBase + "person1.png",
+      },
+      weight: {
+        icon: iconBase + "weight1.png",
       },
     };
   
@@ -79,6 +85,23 @@ export function loadMarkers(map) {
         position: new google.maps.LatLng(38.94327220119762, -92.32583671801366),
         type: "parking",
       },
+      { // ellis library
+        position: new google.maps.LatLng(38.94440674595565, -92.32616446602765),
+        type: "library",
+      },
+      { // student center
+        position: new google.maps.LatLng(38.9427984491364, -92.32667952779617),
+        type: "person",
+      },
+      { // memorial union
+        position: new google.maps.LatLng(38.945149299022134, -92.32507248098916),
+        type: "person",
+      },
+      { // MizzouRec
+        position: new google.maps.LatLng(38.9414198823737, -92.32644018517845),
+        type: "weight",
+      },
+
     ];
   
     for (let i = 0; i < features.length; i++) {
