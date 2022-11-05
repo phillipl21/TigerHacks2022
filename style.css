@@ -87,8 +87,8 @@ body, html {
 #sidebar2 {
     display: block;
     height: 100%;
-    min-width: 300px;
-    max-width: 300px;
+    min-width: 400px;
+    max-width: 400px;
     background: #FBB02D;
     color: #fff;
     transition: all 0.3s;
@@ -224,4 +224,60 @@ body, html {
     color: #FBB02D;
     border-color: #FBB02D;
     background-color: #FBB02D;
+}
+
+.card {
+    cursor: pointer;
+    width: 350px;
+    height: 200px;
+    margin: 10px 10px;
+}
+
+.card-header {
+    height: 40px;
+}
+  
+input[type='checkbox'] {
+    display: none;
+}
+
+.card-container {
+    display: grid;
+    perspective: 700px;
+}
+
+.card-flip {
+    display: grid;
+    grid-template: 1fr / 1fr;
+    grid-template-areas: "frontAndBack";
+    transform-style: preserve-3d;
+    transition: all 0.7s ease;
+}
+
+.card-flip div {
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+}
+
+.front {
+    grid-area: frontAndBack;
+}
+
+.back {
+    grid-area: frontAndBack;
+    transform: rotateY(-180deg);
+}
+
+input[type='checkbox']:checked + .card-container .card-flip {
+    transform: rotateY(180deg);
+}
+
+.scrollabley {
+    max-height: 790px;
+    overflow-y: scroll;
+}
+
+.weathercard {
+    width: 250px;
+    height: 100px;
 }
