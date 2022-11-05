@@ -1,5 +1,4 @@
 export function highlightRoutes(map) {
-    console.log("fuk");
     var directionsService = new google.maps.DirectionsService();
     var directionsDisplay = new google.maps.DirectionsRenderer({
       map: map,

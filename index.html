@@ -82,24 +82,21 @@
         >
           <i class="fas fa-align-justify"></i>
         </button>
-        <nav style="min-height: 1400px" id="sidebar">
+        <nav style="min-height: 1000px" id="sidebar">
           <div class="sidebar-header"></div>
 
           <ul class="list-unstyled components">
             <img style="margin-left: 50px" class="menuimg" src="TiGo.png" />
-            <label class="container"
-              >Hours
-              <input type="checkbox" checked="checked" />
+            <label class="container">Bus Routes
+              <input id="buscheck" type="checkbox" checked="checked" onclick="busroutes()"/>
               <span class="checkmark" style="left: 50px; top: 3px"></span>
             </label>
-            <label class="container"
-              >Parking
-              <input type="checkbox" checked="checked" />
+            <label class="container">Parking
+              <input type="checkbox"/>
               <span class="checkmark" style="left: 50px; top: 3px"></span>
             </label>
-            <label class="container"
-              >Bus Routes
-              <input type="checkbox" checked="checked" />
+            <label class="container">Hours
+              <input type="checkbox"/>
               <span class="checkmark" style="left: 50px; top: 3px"></span>
             </label>
           </ul>
@@ -107,16 +104,40 @@
       </div>
 
       <div id="map_canvas" style="width: 100%; height: 100%"></div>
+    
+
+      <div style="position: absolute; right: 0; top: 0; z-index: 3">
+        <nav style="min-height: 1000px" id="sidebar2">
+          <div class="sidebar-header"></div>
+          <h1>Bus Routes</h1>
+        </nav>
+      </div>
+
     </div>
 
     <script>
+
+      function busroutes() {
+        const buscheckbox = document.getElementById("buscheck");
+        const sidebarright = document.getElementById("sidebar2");
+        if (buscheckbox.checked == false) {
+          sidebarright.style.display = "none";
+        }
+        else {
+          sidebarright.style.display = "block";
+        }
+      }
+
       $(document).ready(function () {
         $("#sidebarCollapse").on("click", function () {
           $("#sidebar").toggleClass("active");
         });
       });
+
     </script>
+
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAMjkQjcToaXSIrGgAeGKDqO67qbq0EHk&callback=myMap"></script>
     <script src="index.js" type="module"></script>
+
   </body>
 </html>

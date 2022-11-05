@@ -84,6 +84,30 @@ body, html {
     padding: 20px 0;
 }
 
+#sidebar2 {
+    display: block;
+    height: 100%;
+    min-width: 300px;
+    max-width: 300px;
+    background: #FBB02D;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar2.active {
+    margin-left: -250px;
+}
+
+#sidebar2 .sidebar2-header {
+    padding: 20px;
+    background: #FBB02D;
+}
+
+#sidebar2 ul.components {
+    padding: 20px 0;
+}
+
+
 /* ---------------------------------------------------
     MEDIAQUERIES
 ----------------------------------------------------- */
