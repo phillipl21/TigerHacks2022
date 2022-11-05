@@ -56,10 +56,17 @@ a:focus {
     align-items: stretch;
 }
 
+body, html {
+    height: 100%;
+    width: 100%;
+}
+  
+
 #sidebar {
-    min-width: 200px;
-    max-width: 200px;
-    background: #7386D5;
+    height: 100%;
+    min-width: 250px;
+    max-width: 250px;
+    background: #FBB02D;
     color: #fff;
     transition: all 0.3s;
 }
@@ -70,86 +77,11 @@ a:focus {
 
 #sidebar .sidebar-header {
     padding: 20px;
-    background: #6d7fcc;
+    background: #FBB02D;
 }
 
 #sidebar ul.components {
     padding: 20px 0;
-    border-bottom: 1px solid #47748b;
-}
-
-#sidebar ul p {
-    color: #fff;
-    padding: 10px;
-}
-
-#sidebar ul li a {
-    padding: 10px;
-    font-size: 1.1em;
-    display: block;
-}
-
-#sidebar ul li a:hover {
-    color: #7386D5;
-    background: #fff;
-}
-
-#sidebar ul li.active>a,
-a[aria-expanded="true"] {
-    color: #fff;
-    background: #6d7fcc;
-}
-
-a[data-toggle="collapse"] {
-    position: relative;
-}
-
-.dropdown-toggle::after {
-    display: block;
-    position: absolute;
-    top: 50%;
-    right: 20px;
-    transform: translateY(-50%);
-}
-
-ul ul a {
-    font-size: 0.9em !important;
-    padding-left: 30px !important;
-    background: #6d7fcc;
-}
-
-ul.CTAs {
-    padding: 20px;
-}
-
-ul.CTAs a {
-    text-align: center;
-    font-size: 0.9em !important;
-    display: block;
-    border-radius: 5px;
-    margin-bottom: 5px;
-}
-
-a.download {
-    background: #fff;
-    color: #7386D5;
-}
-
-a.article,
-a.article:hover {
-    background: #6d7fcc !important;
-    color: #fff !important;
-}
-
-/* ---------------------------------------------------
-    CONTENT STYLE
------------------------------------------------------ */
-
-#content {
-    width: 100%;
-    padding: 20px;
-    min-height: 100vh;
-    transition: all 0.3s;
 }
 
 /* ---------------------------------------------------
@@ -166,4 +98,106 @@ a.article:hover {
     #sidebarCollapse span {
         display: none;
     }
+}
+
+.container {
+    display: block;
+    position: relative;
+    padding-left: 85px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+  
+  /* Hide the browser's default checkbox */
+.container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+  
+  /* Create a custom checkbox */
+.checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+}
+  
+  /* On mouse-over, add a grey background color */
+.container:hover input ~ .checkmark {
+    background-color: lightgray;
+}
+  
+  /* When the checkbox is checked, add a blue background */
+.container input:checked ~ .checkmark {
+    background-color: #2196F3;
+}
+  
+  /* Create the checkmark/indicator (hidden when not checked) */
+.checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+  
+  /* Show the checkmark when checked */
+.container input:checked ~ .checkmark:after {
+    display: block;
+}
+  
+  /* Style the checkmark/indicator */
+.container .checkmark:after {
+    left: 9px;
+    top: 5px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 3px 3px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.menuimg {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    margin-bottom: 30px;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    border: 3px solid white;
+}
+
+.btn-info {
+    /* border-radius: 0px; */
+    border-color: #FBB02D;
+    background-color: #FBB02D;
+}
+
+.btn-info:hover {
+    border-color: #FBB02D;
+    background-color: #FBB02D;
+}
+
+.btn-info:active {
+    color: #FBB02D;
+    border-color: #FBB02D;
+    background-color: #FBB02D;
+}
+
+.btn-info:not(:disabled):not(.disabled).active, .btn-info:not(:disabled):not(.disabled):active, .show>.btn-info.dropdown-toggle {
+    color: #FBB02D;
+    border-color: #FBB02D;
+    background-color: #FBB02D;
 }
