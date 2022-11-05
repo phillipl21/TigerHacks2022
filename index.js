@@ -48,6 +48,7 @@ function initialize() {
     },
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
+    mapTypeControl: false,
     styles: [
       {
         featureType: "poi",
