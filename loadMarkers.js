@@ -18,6 +18,12 @@ export function loadMarkers(map) {
       weight: {
         icon: iconBase + "weight1.png",
       },
+      shop: {
+        icon: iconBase + "shop1.png",
+      },
+      coffee: {
+        icon: iconBase + "coffee.png",
+      },
     };
   
     const features = [
@@ -101,7 +107,98 @@ export function loadMarkers(map) {
         position: new google.maps.LatLng(38.9414198823737, -92.32644018517845),
         type: "weight",
       },
-
+      { // 1+5+3 Salads and Soups
+        position: new google.maps.LatLng(38.93924968027523, -92.33125830703867),
+        type: "food",
+      },
+    //   { // 1839 kitchen
+    //     position: new google.maps.LatLng(38.935014592812695, -92.33163521363811),
+    //     type: "food",
+    //   },
+      { // Baja Grill - all student center
+        position: new google.maps.LatLng(38.9426510787062, -92.32677505452564),
+        type: "food",
+      },
+      { // Bookmark Cafe
+        position: new google.maps.LatLng(38.94418563384068, -92.32707641542541),
+        type: "coffee",
+      },
+      { // Catalyst Cafe
+        position: new google.maps.LatLng(38.94330054002937, -92.32293193107311),
+        type: "coffee",
+      },
+    //   { // Do Mundo's
+    //     position: new google.maps.LatLng(38.94291340398343, -92.32630872978697),
+    //     type: "food",
+    //   },
+      { // Plaza
+        position: new google.maps.LatLng(38.940941083043825, -92.32290955015037),
+        type: "food",
+      },
+    //   { // infusion
+    //     position: new google.maps.LatLng(38.94236548814668, -92.32661017897087),
+    //     type: "coffee",
+    //   },
+    //   { // Legacy Grill38.94528085683478, -92.32466152184817
+    //     position: new google.maps.LatLng(38.931014592812695, -92.33133521363811),
+    //     type: "food",
+    //},
+    //   { // Mort's
+    //     position: new google.maps.LatLng(38.942990525467316, -92.32735117528374),
+    //     type: "food",
+    //   },
+    //   { // Olive and Oil
+    //     position: new google.maps.LatLng(38.939140, -92.332604),
+    //     type: "food",
+    //   },
+      { // Emporium
+        position: new google.maps.LatLng(38.94095410407053, -92.32245364405318),
+        type: "coffee",
+      },
+      { // Potential Energy Cafe
+        position: new google.maps.LatLng(338.94620620812609, -92.32899852793562),
+        type: "coffee",
+      },
+      { // Pizza/Breakfast @ MO
+        position: new google.maps.LatLng(38.94187223621653, -92.3230511498501),
+        type: "food",
+      },
+      { // Sabai
+        position: new google.maps.LatLng(38.94196266974219, -92.32443162448779),
+        type: "food",
+      },
+      { // Starbucks Memorial
+        position: new google.maps.LatLng(38.94529518466892, -92.32498666728256),
+        type: "coffee",
+      },
+      { // Starbucks Southwest
+        position: new google.maps.LatLng(38.938938, -92.332457),
+        type: "coffee",
+      },
+      { // Wheatstone
+        position: new google.maps.LatLng(38.94530588977804, -92.325211),
+        type: "food",
+      },
+      { // The Mark
+        position: new google.maps.LatLng(38.94512195516211, -92.33162925306914),
+        type: "food",
+      },
+      { // mizzou mart southwest
+        position: new google.maps.LatLng(38.939194355395756, -92.33251343790602),
+        type: "shop",
+      },
+      { // mizzou mart hitt
+        position: new google.maps.LatLng(38.9397704505007, -92.32550039911034),
+        type: "shop",
+      },
+      { // subway hitt
+        position: new google.maps.LatLng(38.9398131537622, -92.32570386921351),
+        type: "food",
+      },
+      { // southwest subway
+        position: new google.maps.LatLng(38.9389588333966, -92.33309603721887),
+        type: "food",
+      },
     ];
   
     for (let i = 0; i < features.length; i++) {
