@@ -420,6 +420,15 @@ export function loadMarkers(map) {
 
 
 
+      { // RC15
+        position: new google.maps.LatLng(38.9456114,-92.3330497),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC15 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
       { // RC19
         position: new google.maps.LatLng(38.9492519,-92.3335829),
         type: "parking",
