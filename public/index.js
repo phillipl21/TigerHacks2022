@@ -32,22 +32,23 @@ async function initialize() {
   });
 
   calculateArrivals();
-  placeMarkerAndPanTo(new google.maps.LatLng(38.94, -92.32663), map);
 
   map.addListener("click", (e) => {
-    placeMarkerAndPanTo(e.latLng, map);
-    // console.log("=============")
-    // console.log(e.latLng.lat())
-    // console.log(e.latLng.lng())
-    const latitude = markers[0].position.lat();
-    const longitude = markers[0].position.lng();
-    localStorage.setItem("long", longitude);
-    localStorage.setItem("lat", latitude);
-    // let info = document.getElementById("marker-info")
-    // info.innerText = "Latitude: " + latitude + " | Longitude: " + longitude
+    if (document.getElementById("reportsidebar").style.display === "block") {
+      placeMarkerAndPanTo(e.latLng, map);
+      // console.log("=============")
+      // console.log(e.latLng.lat())
+      // console.log(e.latLng.lng())
+      const latitude = markers[0].position.lat();
+      const longitude = markers[0].position.lng();
+      localStorage.setItem("long", longitude);
+      localStorage.setItem("lat", latitude);
+      // let info = document.getElementById("marker-info")
+      // info.innerText = "Latitude: " + latitude + " | Longitude: " + longitude
 
-    console.log(markers[0].position.lat());
-    console.log(markers[0].position.lng());
+      console.log(markers[0].position.lat());
+      console.log(markers[0].position.lng());
+    }
   });
 
   highlightRoutes(map);
