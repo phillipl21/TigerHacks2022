@@ -177,7 +177,7 @@ export async function createParkingCards(map) {
       long: -92.32583671801366,
     });
     parkinglotdistances.push({
-      name: "Sixth and Cherry Garage",
+      name: "Sixth & Cherry Garage",
       distance: distance(
         pos.coords.latitude,
         pos.coords.longitude,
@@ -315,6 +315,26 @@ export async function createParkingCards(map) {
         "Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.<br>*This lot has metered parking during the day.<br>*There is a kiosk that charges $1.25/h.",
       "Hitt Street Visitor Parking Lot":
         "Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.<br>*This lot has metered parking during the day.</body><br>*There is a kiosk that charges $1.25/hour.",
+      "Sixth & Cherry Garage":
+        "Open 7 Days A Week",
+      "WG10":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC15":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC19":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC9":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC11":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "CG18":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "WC5":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "AV8":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "AV11":
+        "Monday - Friday<br>7:00 am - 6:00 pm"
     };
     console.log("checkpoint");
     for (let i = 0; i < parkinglotdistances.length; i++) {
