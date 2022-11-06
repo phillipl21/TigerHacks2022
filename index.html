@@ -59,7 +59,7 @@
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="icons/TIGO_logo.png">
   </head>
-  <body style="overflow-y: hidden;">
+  <body style="overflow-y: hidden; width: 100%;">
     <div style="height: 100%">
       <!-- Sidebar  -->
       <div style="position: absolute; z-index: 3">
@@ -273,6 +273,8 @@
           <div class="sidebar-header"></div>
           <br>
           <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
+          <div id="parkingcards">
+          </div>
         </nav>
       </div>
 
@@ -349,6 +351,7 @@
 
     <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAMjkQjcToaXSIrGgAeGKDqO67qbq0EHk&callback=myMap"></script>
     <script src="index.js" type="module"></script>
+    <script src="parkingdistance.js" type="module"></script>
 
   </body>
 </html>
