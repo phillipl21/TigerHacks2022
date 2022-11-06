@@ -176,6 +176,116 @@ export async function createParkingCards(map) {
       lat: 38.94327220119762,
       long: -92.32583671801366,
     });
+    parkinglotdistances.push({
+      name: "Sixth & Cherry Garage",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9495549,
+        -92.3319585
+      ),
+      lat: 38.9495549,
+      long: -92.3319585,
+    });
+    parkinglotdistances.push({
+      name: "WG10",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9469902,
+        -92.3327713
+      ),
+      lat: 38.9469902,
+      long: -92.3327713,
+    });
+    parkinglotdistances.push({
+      name: "RC15",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9456114,
+        -92.3330497
+      ),
+      lat: 38.9456114,
+      long: -92.3330497,
+    });
+    parkinglotdistances.push({
+      name: "RC19",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9492519,
+        -92.3335829
+      ),
+      lat: 38.9492519,
+      long: -92.3335829,
+    });
+    parkinglotdistances.push({
+      name: "RC9",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9479949,
+        -92.3346699
+      ),
+      lat: 38.9479949,
+      long: -92.3346699,
+    });
+    parkinglotdistances.push({
+      name: "RC11",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9464558,
+        -92.3307481
+      ),
+      lat: 38.9464558,
+      long: -92.3307481,
+    });
+    parkinglotdistances.push({
+      name: "CG18",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9419589,
+        -92.3307481
+      ),
+      lat: 38.9419589,
+      long: -92.3307481,
+    });
+    parkinglotdistances.push({
+      name: "WC5",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9439034,
+        -92.327034
+      ),
+      lat: 38.9439034,
+      long: -92.327034,
+    });
+    parkinglotdistances.push({
+      name: "AV8",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9400889,
+        -92.3205019
+      ),
+      lat: 38.9400889,
+      long: -92.3205019,
+    });
+    parkinglotdistances.push({
+      name: "AV11",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9399493,
+        -92.3199573
+      ),
+      lat: 38.9399493,
+      long: -92.3199573,
+    });
     parkinglotdistances.sort((a, b) => a.distance - b.distance);
 
     const lotinfo = {
@@ -205,6 +315,26 @@ export async function createParkingCards(map) {
         "Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.<br>*This lot has metered parking during the day.<br>*There is a kiosk that charges $1.25/h.",
       "Hitt Street Visitor Parking Lot":
         "Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.<br>*This lot has metered parking during the day.</body><br>*There is a kiosk that charges $1.25/hour.",
+      "Sixth & Cherry Garage":
+        "Open 7 Days A Week",
+      "WG10":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC15":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC19":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC9":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "RC11":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "CG18":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "WC5":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "AV8":
+        "Monday - Friday<br>7:00 am - 6:00 pm",
+      "AV11":
+        "Monday - Friday<br>7:00 am - 6:00 pm"
     };
     console.log("checkpoint");
     for (let i = 0; i < parkinglotdistances.length; i++) {
