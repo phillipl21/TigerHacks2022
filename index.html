@@ -44,15 +44,10 @@
     <!-- Sidebar  -->
     <div style="position: absolute; z-index: 3">
       <button style="position: absolute; border-radius: 1px; font-size: 25px;" type="button" id="sidebarCollapse"
-        class="btn btn-info menumove">
+        class="btn menumove">
         <i class="fas fa-align-left"></i>
       </button>
 
-      <button class="btn btn-dark d-inline-block d-lg-none ml-auto" type="button" data-toggle="collapse"
-        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-        aria-label="Toggle navigation">
-        <i class="fas fa-align-justify"></i>
-      </button>
       <nav style="height: 100vh" id="sidebar">
         <div class="sidebar-header"></div>
         <img class="menuimg" src="TiGo.png" />
@@ -111,7 +106,7 @@
           <h4>STRIPES</h4>
           <h6 style="font-size: small;">muoslstripes@missouri.edu</h6>
           <h6 style="font-size: small;">
-            573-882-8585
+            573-882-8585 | 
             573.442.9672
           </h6>
 
@@ -333,9 +328,9 @@
         }
 
         if (parkingbutton.checked == false) {
-          sidebarright2.style.display="none";
           sidebarright2.classList.remove("animatein");
           sidebarright2.classList.add('animateout');
+          sidebarright2.style.display="none";
         }
         else if (parkingbutton.checked == true) {
           sidebarright2.style.display = 'block';
