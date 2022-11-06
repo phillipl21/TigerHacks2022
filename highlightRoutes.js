@@ -18,6 +18,7 @@ function hideMarkers(markers) {
 
 export function highlightRoute(map, name) {
   console.log("called");
+  map.setZoom(15);
   if (prevRoute) {
     directions[prevRoute].polyline.setOptions({
       strokeWeight: 5,
@@ -133,6 +134,7 @@ export function highlightRoutes(map) {
         }
         google.maps.event.addListener(polyline, "click", () => {
           console.log("Hearnes Loop 401 clicked");
+
           if (prevRoute) {
             console.log(prevRoute);
             directions[prevRoute].polyline.setOptions({

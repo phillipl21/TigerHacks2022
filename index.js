@@ -2,12 +2,13 @@ import { highlightRoutes, highlightRoute } from "./highlightRoutes.js";
 import { loadMarkers } from "./loadMarkers.js";
 import { loadReports } from "./loadReports.js";
 import { createParkingCards } from "./parkingdistance.js";
+import { calculateArrivals } from "./calculateArrivals.js";
 
 const BOUNDS = {
-  north: 38.99,
-  south: 38.89,
-  west: -92.45,
-  east: -92.2,
+  north: 38.96,
+  south: 38.925,
+  west: -92.38,
+  east: -92.28,
 };
 
 async function initialize() {
@@ -29,10 +30,12 @@ async function initialize() {
     ],
   });
 
+  calculateArrivals();
+
   highlightRoutes(map);
 
   loadMarkers(map);
-  
+
   await loadReports(map);
 
   document.getElementById("card-1").addEventListener("click", () => {
