@@ -21,7 +21,7 @@ export function highlightRoute(map, name) {
   if (prevRoute) {
     directions[prevRoute].polyline.setOptions({
       strokeWeight: 5,
-      strokeOpacity: 0.3,
+      strokeOpacity: 0.4,
     });
     hideMarkers(directions[prevRoute].markers);
   }
@@ -103,7 +103,7 @@ export function highlightRoutes(map) {
           path: [],
           strokeColor: "#FF0000",
           strokeWeight: 5,
-          strokeOpacity: 0.3,
+          strokeOpacity: 0.4,
         });
         var bounds = new google.maps.LatLngBounds();
 
@@ -137,7 +137,7 @@ export function highlightRoutes(map) {
             console.log(prevRoute);
             directions[prevRoute].polyline.setOptions({
               strokeWeight: 5,
-              strokeOpacity: 0.3,
+              strokeOpacity: 0.4,
             });
             hideMarkers(directions[prevRoute].markers);
           }
@@ -216,7 +216,7 @@ export function highlightRoutes(map) {
           path: [],
           strokeColor: "#00FF00",
           strokeWeight: 5,
-          strokeOpacity: 0.3,
+          strokeOpacity: 0.4,
         });
         var bounds = new google.maps.LatLngBounds();
 
@@ -250,7 +250,7 @@ export function highlightRoutes(map) {
           if (prevRoute) {
             directions[prevRoute].polyline.setOptions({
               strokeWeight: 5,
-              strokeOpacity: 0.3,
+              strokeOpacity: 0.4,
             });
             hideMarkers(directions[prevRoute].markers);
           }
@@ -340,7 +340,7 @@ export function highlightRoutes(map) {
           path: [],
           strokeColor: "#0000FF",
           strokeWeight: 5,
-          strokeOpacity: 0.3,
+          strokeOpacity: 0.4,
         });
         var bounds = new google.maps.LatLngBounds();
 
@@ -374,7 +374,7 @@ export function highlightRoutes(map) {
           if (prevRoute) {
             directions[prevRoute].polyline.setOptions({
               strokeWeight: 5,
-              strokeOpacity: 0.3,
+              strokeOpacity: 0.4,
             });
             hideMarkers(directions[prevRoute].markers);
           }
@@ -447,9 +447,9 @@ export function highlightRoutes(map) {
       if (status === google.maps.DirectionsStatus.OK) {
         var polyline = new google.maps.Polyline({
           path: [],
-          strokeColor: "#FFFF00",
+          strokeColor: "#EEEE00",
           strokeWeight: 5,
-          strokeOpacity: 0.3,
+          strokeOpacity: 0.4,
         });
         var bounds = new google.maps.LatLngBounds();
 
@@ -482,7 +482,7 @@ export function highlightRoutes(map) {
           if (prevRoute) {
             directions[prevRoute].polyline.setOptions({
               strokeWeight: 5,
-              strokeOpacity: 0.3,
+              strokeOpacity: 0.4,
             });
             hideMarkers(directions[prevRoute].markers);
           }
@@ -498,14 +498,14 @@ export function highlightRoutes(map) {
         });
         google.maps.event.addListener(polyline, "mouseout", () => {
           if (!prevRoute) {
-            polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.3 });
+            polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.4 });
             hideMarkers(markers);
           }
         });
         map.addListener("click", () => {
           hideMarkers(markers);
           prevRoute = null;
-          polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.3 });
+          polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.4 });
         });
 
         hideMarkers(markers);
