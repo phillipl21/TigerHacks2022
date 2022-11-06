@@ -52,12 +52,21 @@ export function loadMarkers(map) {
           '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
         }),
       },
+      { //WG16
+        position: new google.maps.LatLng(38.9433534,-92.3324172),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+          content: '<h6 style="font-family">WG16 Parking lot</h6>' + 
+          '<b>ASSIGNED STAFF ONLY' +
+          '<br>MONDAY - FRIDAY: 7:00 AM - 5:00 PM'
+        }),
+      },
       { //conley ave garage
         position: new google.maps.LatLng(38.94514490207793, -92.33158633772024),
         type: "parking",
         content: new google.maps.InfoWindow({
             content: '<h6 style="font-family">Conley Parking Garage</h6>' + 
-            '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
+            '<body><br>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
           }),
       },
       { //turner ave garage
