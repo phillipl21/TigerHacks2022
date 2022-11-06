@@ -8,7 +8,7 @@ function hideMarkers(markers) {
 
 export function highlightRoutes(map) {
   /***** HEARNES LOOP 401 *****/
-  var routeSelected = false;
+  var prevRoute = false;
   var directionsService = new google.maps.DirectionsService();
   var directionsDisplay = new google.maps.DirectionsRenderer({
     map: map,
@@ -107,24 +107,28 @@ export function highlightRoutes(map) {
         }
         google.maps.event.addListener(polyline, "click", () => {
           console.log("Hearnes Loop 401 clicked");
+          if (prevRoute) {
+            prevRoute.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+          }
+          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
           showMarkers(map, markers);
-          routeSelected = true;
+          prevRoute = polyline;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
             showMarkers(map, markers);
           }
         });
         google.maps.event.addListener(polyline, "mouseout", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
             hideMarkers(markers);
           }
         });
         map.addListener("click", () => {
           hideMarkers(markers);
-          routeSelected = false;
+          prevRoute = null;
           polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
         });
 
@@ -210,24 +214,28 @@ export function highlightRoutes(map) {
         console.log(markers);
         google.maps.event.addListener(polyline, "click", () => {
           console.log("Trowbridge Loop 402 clicked");
+          if (prevRoute) {
+            prevRoute.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+          }
+          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
           showMarkers(map, markers);
-          routeSelected = true;
+          prevRoute = polyline;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
             showMarkers(map, markers);
           }
         });
         google.maps.event.addListener(polyline, "mouseout", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
             hideMarkers(markers);
           }
         });
         map.addListener("click", () => {
           hideMarkers(markers);
-          routeSelected = false;
+          prevRoute = null;
           polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
         });
 
@@ -324,24 +332,28 @@ export function highlightRoutes(map) {
         console.log(markers);
         google.maps.event.addListener(polyline, "click", () => {
           console.log("Campus Loop 405 clicked");
+          if (prevRoute) {
+            prevRoute.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+          }
+          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
           showMarkers(map, markers);
-          routeSelected = true;
+          prevRoute = polyline;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
             showMarkers(map, markers);
           }
         });
         google.maps.event.addListener(polyline, "mouseout", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
             hideMarkers(markers);
           }
         });
         map.addListener("click", () => {
           hideMarkers(markers);
-          routeSelected = false;
+          prevRoute = null;
           polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
         });
 
@@ -422,24 +434,28 @@ export function highlightRoutes(map) {
         }
         google.maps.event.addListener(polyline, "click", () => {
           console.log("MU Reactor Loop 403 clicked");
+          if (prevRoute) {
+            prevRoute.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
+          }
+          polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
           showMarkers(map, markers);
-          routeSelected = true;
+          prevRoute = polyline;
         });
         google.maps.event.addListener(polyline, "mouseover", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 8, strokeOpacity: 0.7 });
             showMarkers(map, markers);
           }
         });
         google.maps.event.addListener(polyline, "mouseout", () => {
-          if (!routeSelected) {
+          if (!prevRoute) {
             polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
             hideMarkers(markers);
           }
         });
         map.addListener("click", () => {
           hideMarkers(markers);
-          routeSelected = false;
+          prevRoute = null;
           polyline.setOptions({ strokeWeight: 5, strokeOpacity: 0.5 });
         });
 

@@ -10,7 +10,7 @@ const BOUNDS = {
 
 function initialize() {
   var map = new google.maps.Map(document.getElementById("map_canvas"), {
-    center: new google.maps.LatLng(38.940, -92.326635),
+    center: new google.maps.LatLng(38.94, -92.326635),
     restriction: {
       latLngBounds: BOUNDS,
       strictBounds: false,
@@ -18,11 +18,12 @@ function initialize() {
     zoom: 15,
     mapTypeId: google.maps.MapTypeId.ROADMAP,
     mapTypeControl: false,
+    streetViewControl: false,
     styles: [
       {
         featureType: "poi",
         stylers: [{ visibility: "off" }],
-      }
+      },
     ],
   });
 
