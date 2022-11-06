@@ -390,7 +390,8 @@ export function loadMarkers(map) {
           }),
       },
     ];
-    
+    console.log(features[0]);
+    //console.log(features);
     var markers = [];
 
     //creates all the markers and their info windows
@@ -402,7 +403,7 @@ export function loadMarkers(map) {
         infowindow: features[i].content
         // title: "Hello world!"
       });
-
+      
     markers.push(marker);
     //listener for click
     marker.addListener("click", function() {
