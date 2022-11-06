@@ -38,112 +38,122 @@ export function loadMarkers(map) {
         position: new google.maps.LatLng(38.947844369844795, -92.32578733896105),
         type: "parking",
         content: new google.maps.InfoWindow({
-          content: 'Test content',
+          content: '<h6 style="font-family">Hitt Street Parking Garage</h6>' + 
+          '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.' +
+          '<br>*There is a kiosk on the 4th floor that charges $1.25/hour.' +
+          '<br>*The top floor is restricted 24/7.</b></body>'
         }),
       },
       { //university avenue garage
         position: new google.maps.LatLng(38.94701658266523, -92.32372902846195),
         type: "parking",
         content: new google.maps.InfoWindow({
-          content: 'Test content',
+          content: '<h6 style="font-family">University Avenue Parking Garage</h6>' + 
+          '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
         }),
       },
       { //conley ave garage
-        position: new google.maps.LatLng(38.94538529005281, -92.33150207017896),
+        position: new google.maps.LatLng(38.94514490207793, -92.33158633772024),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Conley Parking Garage</h6>' + 
+            '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
           }),
       },
       { //turner ave garage
         position: new google.maps.LatLng(38.94366217039565, -92.3306491277232),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
-          }),
-      },
-      { //tiger ave garage
-        position: new google.maps.LatLng(38.93831466093758, -92.33017375768632),
-        type: "parking",
-        content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Turner Avenue Parking Garage</h6>' + 
+            '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
           }),
       },
       { //virginia avenue garage
         position: new google.maps.LatLng(38.93995942051914, -92.3245841785612),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
-          }),
-      },
-      { //parking structure #7
-        position: new google.maps.LatLng(38.93708661633961, -92.32506965841958),
-        type: "parking",
-        content: new google.maps.InfoWindow({
-            content: 'Test content',
-          }),
-      },
-      { //parking structure #7
-        position: new google.maps.LatLng(38.93708661633961, -92.32506965841958),
-        type: "parking",
-        content: new google.maps.InfoWindow({
-            content: 'Test content',
-          }),
+            content: '<h6 style="font-family">Virginia Parking Garage</h6>' + 
+            '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>*Floors 4-6 are restricted 24/7.</b></body>'
+            }),
       },
       { //WG10 - near Twain
-        position: new google.maps.LatLng(38.94454794767063, -92.33127226676486),
+        position: new google.maps.LatLng(38.944281258458744, -92.33191088501378),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">WG10 Parking Lot</h6>' + 
+            '<body><b>Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>*This lot has metered parking during the day.' +
+            '<br>*There is a kiosk that charges $1.25/hour.</body>'
           }),
       },
       { //Memorial Union Visitor Lot
         position: new google.maps.LatLng(38.94546999814113, -92.3241858704455),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Memorial Union Visitor Parking Lot</h6>' + 
+            '<body><b>Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>This lot has metered parking during the day.</body>'
           }),
       },
       { //WC7 - near Middlebush
         position: new google.maps.LatLng(38.94577039208177, -92.32654621440473),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">WC7 Parking Lot</h6>' + 
+            '<body><b>Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>This lot has metered parking during the day.' +
+            '<br>There are 14 spaces available.</body>'
           }),
       },
       { //CG17 - between SC & Stank
         position: new google.maps.LatLng(38.941889532937616, -92.32941135766158),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">CG17 Parking Lot</h6>' + 
+            '<body><b>Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>This lot has metered parking during the day.' +
+            '<br>There is a kiosk that charges $1.25/hour.</body>'
           }),
       },
       { //CG2 - black culture center
         position: new google.maps.LatLng(38.94091110831369, -92.32426151634915),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">CG2 Parking Lot</h6>' + 
+            '<body><b>Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>This lot has metered parking during the day.' +
+            '<br>There is a kiosk that charges $1.25/hour.</body>'
           }),
       },
       { //VAG Surface Parking
         position: new google.maps.LatLng(38.93992641151287, -92.3238752782632),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Virginia Avenue Surface Lot</h6>' + 
+            '<body><b>Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>*This lot has metered parking during the day.' +
+            '<br>*There is a kiosk that charges $1.25/hour.</body>'
           }),
       },
-      { //Southwest Athletic lot
+      { //Southwest Athletic lot WG1
         position: new google.maps.LatLng(38.937654, -92.331345),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">WG1 Parking Lot</h6>' + 
+            '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>*This lot has metered parking during the day.' +
+            '<br>*There is a kiosk that charges $1.25/h.</body>'
           }),
       },
-      { //SC / Hitt Street visitor lot
+      { //Hitt Street visitor lot
         position: new google.maps.LatLng(38.94327220119762, -92.32583671801366),
         type: "parking",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Hitt Street Visitor Parking Lot</h6>' + 
+            '<body><b>Parking restrictions enforced 7 a.m.-6 p.m., Monday-Friday.' +
+            '<br>*This lot has metered parking during the day.</body>' +
+            '<br>*There is a kiosk that charges $1.25/hour.</body>'
           }),
       },
       { // ellis library
@@ -181,10 +191,6 @@ export function loadMarkers(map) {
             content: 'Test content',
           }),
       },
-    //   { // 1839 kitchen
-    //     position: new google.maps.LatLng(38.935014592812695, -92.33163521363811),
-    //     type: "food",
-    //   },
       { // Baja Grill - all student center
         position: new google.maps.LatLng(38.9426510787062, -92.32677505452564),
         type: "food",
@@ -206,10 +212,6 @@ export function loadMarkers(map) {
             content: 'Test content',
           }),
       },
-    //   { // Do Mundo's
-    //     position: new google.maps.LatLng(38.94291340398343, -92.32630872978697),
-    //     type: "food",
-    //   },
       { // Plaza
         position: new google.maps.LatLng(38.940941083043825, -92.32290955015037),
         type: "food",
@@ -217,22 +219,6 @@ export function loadMarkers(map) {
             content: 'Test content',
           }),
       },
-    //   { // infusion
-    //     position: new google.maps.LatLng(38.94236548814668, -92.32661017897087),
-    //     type: "coffee",
-    //   },
-    //   { // Legacy Grill38.94528085683478, -92.32466152184817
-    //     position: new google.maps.LatLng(38.931014592812695, -92.33133521363811),
-    //     type: "food",
-    //},
-    //   { // Mort's
-    //     position: new google.maps.LatLng(38.942990525467316, -92.32735117528374),
-    //     type: "food",
-    //   },
-    //   { // Olive and Oil
-    //     position: new google.maps.LatLng(38.939140, -92.332604),
-    //     type: "food",
-    //   },
       { // Emporium
         position: new google.maps.LatLng(38.94095410407053, -92.32245364405318),
         type: "coffee",
@@ -283,7 +269,7 @@ export function loadMarkers(map) {
           }),
       },
       { // The Mark
-        position: new google.maps.LatLng(38.94512195516211, -92.33162925306914),
+        position: new google.maps.LatLng(38.94498218741994, -92.33246610226834),
         type: "food",
         content: new google.maps.InfoWindow({
             content: 'Test content',
