@@ -341,3 +341,7 @@ input[type='checkbox']:checked + .card-container .card-flip {
 .form-check {
     padding: 3px;
 }
+
+.modal-backdrop {
+    z-index: 0;
+}

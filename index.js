@@ -1,4 +1,4 @@
-import { highlightRoutes } from "./highlightRoutes.js";
+import { highlightRoutes, highlightRoute } from "./highlightRoutes.js";
 import { loadMarkers } from "./loadMarkers.js";
 
 const BOUNDS = {
@@ -31,6 +31,17 @@ function initialize() {
 
   loadMarkers(map);
 
-  // map.setOptions();
+  document.getElementById("card-1").addEventListener("click", () => {
+    highlightRoute(map, "polyline1");
+  });
+  document.getElementById("card-2").addEventListener("click", () => {
+    highlightRoute(map, "polyline2");
+  });
+  document.getElementById("card-3").addEventListener("click", () => {
+    highlightRoute(map, "polyline3");
+  });
+  document.getElementById("card-4").addEventListener("click", () => {
+    highlightRoute(map, "polyline4");
+  });
 }
 window.addEventListener("load", initialize);
