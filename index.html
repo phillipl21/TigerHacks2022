@@ -80,13 +80,15 @@
           </div>
         </div>
 
+        <button id="place-marker" class="btn btn-dark btn-lg" style="width:80%; height:8%; position:relative; left:10%; top:30%">Place Marker</button>
+
         <button class="btn btn-dark btn-lg" 
           style="width:80%; height:8%; position:relative; left:10%; top:30%" type="button" data-toggle="modal" data-target="#exampleModal">
-          <i>SUBMIT REPORT</i> 
+          <i>CREATE REPORT</i> 
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:3">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:4">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -271,53 +273,43 @@
     </div>
 
 
-    <!-- Parking Card -->
-    <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar2">
-      <nav style="min-height: 790px" id="sidebar3" class="scrollabley">
-        <div class="sidebar-header"></div>
-        <br>
-        <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
-      </nav>
-    </div>
+      <!-- Parking Card -->
+      <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar2">
+        <nav style="min-height: 790px" id="sidebar3" class="scrollabley">
+          <div class="sidebar-header"></div>
+          <br>
+          <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
+          <div id="parkingcards">
+          </div>
+        </nav>
+      </div>
 
     <!-- Weather -->
     <!-- When bus routes is enabled: [left: 995px] 
          When bus routes not enabled: [left: 1250px]
     -->
-    <div id="weather" style="float: right; position: absolute; z-index: 3; top: 1px; right: 400px;">
-      <div class="card border-warning mb-3 weathercard" style="max-width: 500px;">
-        <div class="row g-4">
-          <div class="col-md-4">
-            <img src="icons/03d.png" class="weather-icon" />
-          </div>
-
+    <div id="weather" style="float: right; position: absolute; z-index: 2.5; top: 1px; right: 400px;">
+      <div class="card border-warning mb-3 weathercard" style="max-width: 500px; cursor: initial;">
+          <div class="row g-4">
+              <div class="col-md-4">
+                  <img 
+                      src="icons/03d.png" 
+                      class="weather-icon" 
+                      style="height: 50px; width: 50px; position: absolute; top: 23px; left: 35px;" 
+                  />
+              </div>
+          
           <div class="col-md-7">
-
-            <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
-              <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
-              <p class="card-text" id="desc" style="font-size: small;">----</p>
-        <div class="card border-warning mb-3 weathercard" style="max-width: 500px;">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img 
-                        src="icons/03d.png" 
-                        class="weather-icon" 
-                        style="height: 50px; width: 50px; position: absolute; top: 23px; left: 35px;" 
-                    />
-                </div>
-            
-            <div class="col-md-7">
-                
-                <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
-                    <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
-                    <p class="card-text" id="desc" style="font-size: small;">----</p>
-                </div>
-            </div>
+              
+              <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
+                  <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
+                  <p class="card-text" id="desc" style="font-size: small;">----</p>
+              </div>
           </div>
-        </div>
+          </div>
       </div>
       <script src="weather.js"></script>
-    </div>
+  </div>
 
     <script>
 
@@ -417,6 +409,8 @@
       writeUserData(35.420, 36.69, "ashwin prayaga");
       
     </script>
+
+    <script src="./parkingdistance.js"></script>
 </body>
 
 </html>
