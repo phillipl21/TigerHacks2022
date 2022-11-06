@@ -302,3 +302,17 @@ input[type='checkbox']:checked + .card-container .card-flip {
 .menumove {
     background-color: #FBB02D;
 }
+
+.dot {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    display: inline-block;
+    position: absolute;
+    top: 7px;
+    right: 14px;
+}
+
+.card {
+    position: relative;
+}
