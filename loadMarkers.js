@@ -398,6 +398,74 @@ export function loadMarkers(map) {
             '<body><b>Monday - Sunday</b>' + '<br>11:00 am - 11:00 pm</body>'
           }),
       },
+      { // Sixth & Cherry Garage
+        position: new google.maps.LatLng(38.9495549,-92.3319585),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">Sixth & Cherry Garage</h6>' +
+            '<b>Open 7 Days A Week</b>'
+          }),
+      },
+      //PARKING TIMES NOT CONFIRMED
+
+
+
+      { // RC19
+        position: new google.maps.LatLng(38.9488036,-92.3323641),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC19 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // RC9
+        position: new google.maps.LatLng(38.9469902,-92.3327713),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC9 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // RC11
+        position: new google.maps.LatLng(38.9469902,-92.3327713),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC11 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // WG10
+        position: new google.maps.LatLng(38.9469902,-92.3327713),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC11 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // CG18
+        position: new google.maps.LatLng(38.9418467,-92.3288058),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">CG18 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // WC5
+        position: new google.maps.LatLng(38.9418467,-92.3288058),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">WC5 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+
     ];
     
     var markers = [];
