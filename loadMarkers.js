@@ -30,10 +30,16 @@ export function loadMarkers(map) {
       { //hitt street
         position: new google.maps.LatLng(38.947844369844795, -92.32578733896105),
         type: "parking",
+        content: new google.maps.InfoWindow({
+          content: 'Test content',
+        }),
       },
       { //university avenue garage
         position: new google.maps.LatLng(38.94701658266523, -92.32372902846195),
         type: "parking",
+        content: new google.maps.InfoWindow({
+          content: 'Test content',
+        }),
       },
       { //conley ave garage
         position: new google.maps.LatLng(38.94538529005281, -92.33150207017896),
@@ -206,7 +212,15 @@ export function loadMarkers(map) {
         position: features[i].position,
         icon: icons[features[i].type].icon,
         map: map,
+        infowindow: features[i].content
+        // title: "Hello world!"
       });
+      marker.addListener("click", () => {
+        marker.infowindow.open({
+          anchor: marker,
+          map,
+        })
+      })
     }
   }
   
