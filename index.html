@@ -75,15 +75,17 @@
           </div>
         </div>
 
-        <button id="place-marker" class="btn btn-dark btn-lg" style="width:80%; height:8%; position:relative; left:10%; top:30%">Place Marker</button>
+        <button id="place-marker" class="btn btn-dark btn-lg"
+          style="width:80%; height:8%; position:relative; left:10%; top:30%">Place Marker</button>
 
-        <button class="btn btn-dark btn-lg" 
-          style="width:80%; height:8%; position:relative; left:10%; top:30%" type="button" data-toggle="modal" data-target="#exampleModal">
-          <i>CREATE REPORT</i> 
+        <button class="btn btn-dark btn-lg" style="width:80%; height:8%; position:relative; left:10%; top:30%"
+          type="button" data-toggle="modal" data-target="#exampleModal">
+          <i>CREATE REPORT</i>
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:4">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+          aria-hidden="true" style="z-index:4">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -268,16 +270,16 @@
     </div>
 
 
-      <!-- Parking Card -->
-      <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar2">
-        <nav style="min-height: 790px" id="sidebar3" class="scrollabley">
-          <div class="sidebar-header"></div>
-          <br>
-          <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
-          <div style="margin-left: 15px;" id="parkingcards">
-          </div>
-        </nav>
-      </div>
+    <!-- Parking Card -->
+    <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar2">
+      <nav style="min-height: 790px" id="sidebar3" class="scrollabley">
+        <div class="sidebar-header"></div>
+        <br>
+        <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
+        <div id="parkingcards">
+        </div>
+      </nav>
+    </div>
 
     <!-- Weather -->
     <!-- When bus routes is enabled: [left: 995px] 
@@ -285,26 +287,23 @@
     -->
     <div id="weather" style="float: right; position: absolute; z-index: 2.5; top: 1px; right: 400px;">
       <div class="card border-warning mb-3 weathercard" style="max-width: 500px; cursor: initial;">
-          <div class="row g-4">
-              <div class="col-md-4">
-                  <img 
-                      src="icons/03d.png" 
-                      class="weather-icon" 
-                      style="height: 50px; width: 50px; position: absolute; top: 23px; left: 35px;" 
-                  />
-              </div>
-          
+        <div class="row g-4">
+          <div class="col-md-4">
+            <img src="icons/03d.png" class="weather-icon"
+              style="height: 50px; width: 50px; position: absolute; top: 23px; left: 35px;" />
+          </div>
+
           <div class="col-md-7">
-              
-              <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
-                  <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
-                  <p class="card-text" id="desc" style="font-size: small;">----</p>
-              </div>
+
+            <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
+              <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
+              <p class="card-text" id="desc" style="font-size: small;">----</p>
+            </div>
           </div>
-          </div>
+        </div>
       </div>
       <script src="weather.js"></script>
-  </div>
+    </div>
 
     <script>
 
@@ -357,56 +356,11 @@
 
     </script>
     <script
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAMjkQjcToaXSIrGgAeGKDqO67qbq0EHk&callback=myMap"></script>
-    <script src="index.js" type="module"></script>
-    <script type="module">
-      // Import the functions you need from the SDKs you need
-      import { initializeApp } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-app.js";
-      import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-analytics.js";
-      import { getDatabase, ref, child, get, set } from "https://www.gstatic.com/firebasejs/9.13.0/firebase-database.js";
-
-      // TODO: Add SDKs for Firebase products that you want to use
-      // https://firebase.google.com/docs/web/setup#available-libraries
-
-      // Your web app's Firebase configuration
-      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-      const firebaseConfig = {
-        apiKey: "AIzaSyAKEII6bITlZn5VRtp7uJU5v-Vv86fJ0oA",
-        authDomain: "tigo-45525.firebaseapp.com",
-        databaseURL: "https://tigo-45525-default-rtdb.firebaseio.com",
-        projectId: "tigo-45525",
-        storageBucket: "tigo-45525.appspot.com",
-        messagingSenderId: "1026292477497",
-        appId: "1:1026292477497:web:b294bfce7e4e41f81627e8",
-        measurementId: "G-9PSM9X7HPM"
-      };
-
-      // Initialize Firebase
-      const app = initializeApp(firebaseConfig);
-      const analytics = getAnalytics(app);
-      const database = getDatabase();
-      const dbRef = ref(database);
-      get(child(dbRef, `reports/`)).then((snapshot) => {
-        if (snapshot.exists()) {
-          console.log(snapshot.val());
-        } else {
-          console.log("No data available");
-        }
-      }).catch((error) => {
-        console.error(error);
-      });
-
-      console.log(app)
-      function writeUserData(lat, long, title) {
-        set(ref(database, 'reports/' + title), {
-
-          lat: lat,
-          long: long,
-        });
-      }
-      writeUserData(35.420, 36.69, "ashwin prayaga");
-      
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAMjkQjcToaXSIrGgAeGKDqO67qbq0EHk&callback=myMap">
     </script>
+    <script src="index.js" type="module"></script>
+    <script src="./parkingdistance.js"></script>
+    <script src="./firebase.js" type="module"></script>
 </body>
 
 </html>

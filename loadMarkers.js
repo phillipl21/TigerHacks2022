@@ -623,7 +623,6 @@ export function loadMarkers(map) {
       icon: icons[features[i].type].icon,
       map: map,
       infowindow: features[i].content,
-      // title: "Hello world!"
     });
 
     markers.push(marker);

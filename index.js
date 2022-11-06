@@ -1,5 +1,6 @@
 import { highlightRoutes, highlightRoute } from "./highlightRoutes.js";
 import { loadMarkers } from "./loadMarkers.js";
+import { loadReports } from "./loadReports.js";
 import { createParkingCards } from "./parkingdistance.js";
 
 const BOUNDS = {
@@ -9,7 +10,7 @@ const BOUNDS = {
   east: -92.2,
 };
 
-function initialize() {
+async function initialize() {
   var map = new google.maps.Map(document.getElementById("map_canvas"), {
     center: new google.maps.LatLng(38.94, -92.326635),
     restriction: {
@@ -31,6 +32,8 @@ function initialize() {
   highlightRoutes(map);
 
   loadMarkers(map);
+  
+  await loadReports(map);
 
   document.getElementById("card-1").addEventListener("click", () => {
     highlightRoute(map, "polyline1");
