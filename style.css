@@ -84,6 +84,40 @@ body, html {
     padding: 20px 0;
 }
 
+.animateout {
+    -webkit-animation-name: cssAnimation1;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+  
+@-webkit-keyframes cssAnimation1 {
+from {
+    -webkit-transform: rotate(0deg) translate(0px);
+}
+to {
+    -webkit-transform: rotate(0deg) translate(400px);
+}
+}
+
+.animatein {
+    -webkit-animation-name: cssAnimation2;
+    -webkit-animation-duration: .5s;
+    -webkit-animation-iteration-count: 1;
+    -webkit-animation-timing-function: ease;
+    -webkit-animation-fill-mode: forwards;
+}
+  
+@-webkit-keyframes cssAnimation2 {
+    from {
+        -webkit-transform: rotate(0deg) translate(400px);
+    }
+    to {
+        -webkit-transform: rotate(0deg) translate(0px);
+    }
+}
+
 #sidebar2 {
     display: block;
     height: 100%;
@@ -94,16 +128,31 @@ body, html {
     transition: all 0.3s;
 }
 
-#sidebar2.active {
-    margin-left: -250px;
-}
-
 #sidebar2 .sidebar2-header {
     padding: 20px;
     background: #FBB02D;
 }
 
 #sidebar2 ul.components {
+    padding: 20px 0;
+}
+
+#sidebar3 {
+    display: none;
+    height: 100%;
+    min-width: 400px;
+    max-width: 400px;
+    background: #FBB02D;
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar3 .sidebar3-header {
+    padding: 20px;
+    background: #FBB02D;
+}
+
+#sidebar3 ul.components {
     padding: 20px 0;
 }
 
@@ -279,6 +328,16 @@ input[type='checkbox']:checked + .card-container .card-flip {
 }
 
 .weathercard {
-    width: 200px;
+    width: 225px;
     height: 100px;
+}
+
+.radiobtns {
+    margin-top: 20px;
+    margin-left: 23%;
+    font-size: 18px;
+}
+
+.form-check {
+    padding: 3px;
 }
