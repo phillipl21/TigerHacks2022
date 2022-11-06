@@ -225,7 +225,7 @@ export async function createParkingCards(map) {
     }
     for (let i = 0; i < parkinglotdistances.length; i++) {
       var card = document.getElementById("parking-card" + i.toString());
-      console.log(card);
+      //console.log(card);
       card.addEventListener("click", () => {
         console.log("debug");
         map.setCenter(

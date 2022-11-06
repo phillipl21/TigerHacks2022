@@ -47,7 +47,7 @@ function writeUserData(lat, long, title) {
   });
 }
 writeUserData(38.935157, -92.326559, "the great wall of china");
-writeUserData(38.935157, -91.326559, "ashwin prayaga");
+writeUserData(38.938937, -92.322879, "ashwin prayaga");
 export async function createReports() {
   var reports = [];
   var x = await readDatabase(dbRef);
