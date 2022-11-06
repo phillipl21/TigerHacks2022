@@ -40,6 +40,7 @@
 </head>
 
 <body style="overflow-y: hidden;">
+  <script src="index.js" type="module"></script>
   <div style="height: 100%">
     <!-- Sidebar  -->
     <div style="position: absolute; z-index: 3">
@@ -75,35 +76,15 @@
           </div>
         </div>
 
-        <button id="place-marker" class="btn btn-dark btn-lg"
-          style="width:80%; height:8%; position:relative; left:10%; top:30%">Place Marker</button>
+        <!-- <p>Marker Coords:</p>
+        <p id="marker-info"></p>
+        <button class="btn btn-dark btn-lg" style="width:80%; height:8%; position:relative; left:10%; top:30%">Place Marker</button> -->
 
-        <button class="btn btn-dark btn-lg" style="width:80%; height:8%; position:relative; left:10%; top:30%"
-          type="button" data-toggle="modal" data-target="#exampleModal">
-          <i>CREATE REPORT</i>
+        <button class="btn btn-dark btn-lg" 
+          style="width:80%; height:8%; position:relative; left:10%; top:30%" type="button" onclick="report()">
+          <i>CREATE REPORT</i> 
         </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-          aria-hidden="true" style="z-index:4">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="container" style="position: absolute; bottom: 0; right: 48px; text-align: center; cursor:default">
           <h4>STRIPES</h4>
           <h6 style="font-size: small;">muoslstripes@missouri.edu</h6>
@@ -117,7 +98,6 @@
     </div>
 
     <div id="map_canvas" style="width: 100%; height: 100%"></div>
-
 
     <!-- BusRoutes Card -->
     <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar">
@@ -147,7 +127,7 @@
             <!-- Card Back -->
             <div class="card back">
               <div class="card-header">
-                <h5 style="color: black;">Hearnes Loop (401)</h5>
+                <h5 style="color: black;">Hearnes Loop (401)<span style="background-color: red;" class="dot"></span></h5>
               </div>
               <div class="card-block">
                 <p style="font-size: 14px; margin-left: 7px; margin-top: 6px;" class="card-text">
@@ -187,7 +167,7 @@
             <!-- Card Back -->
             <div class="card back">
               <div class="card-header">
-                <h5 style="color: black;">Throwbridge Loop (402)</h5>
+                <h5 style="color: black;">Throwbridge Loop (402)<span style="background-color: lightgreen;" class="dot"></span></h5>
               </div>
               <div class="card-block">
                 <p style="font-size: 14px; margin-left: 7px; margin-top: 6px;" class="card-text">
@@ -223,7 +203,7 @@
             <!-- Card Back -->
             <div class="card back">
               <div class="card-header">
-                <h5 style="color: black;">MU Reactor Loop (403)</h5>
+                <h5 style="color: black;">MU Reactor Loop (403)<span style="background-color: blue;" class="dot"></span></h5>
               </div>
               <div class="card-block">
                 <p style="font-size: 14px; margin-left: 7px; margin-top: 6px;" class="card-text">
@@ -260,7 +240,7 @@
             <!-- Card Back -->
             <div class="card back">
               <div class="card-header">
-                <h5 style="color: black;">Campus Loop (405)</h5>
+                <h5 style="color: black;">Campus Loop (405)<span style="background-color: yellow;" class="dot"></span></h5>
               </div>
               <div class="card-block">
                 <p style="font-size: 14px; margin-left: 7px; margin-top: 6px;" class="card-text">
@@ -278,16 +258,49 @@
     </div>
 
 
-    <!-- Parking Card -->
-    <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar2">
-      <nav style="min-height: 790px" id="sidebar3" class="scrollabley">
-        <div class="sidebar-header"></div>
-        <br>
-        <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
-        <div id="parkingcards">
-        </div>
-      </nav>
-    </div>
+      <!-- Parking Sidebar -->
+      <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar2">
+        <nav style="min-height: 790px" id="sidebar3" class="scrollabley">
+          <div class="sidebar-header"></div>
+          <br>
+          <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
+          <div style="margin-left: 15px;" id="parkingcards">
+          </div>
+        </nav>
+      </div>
+
+      <!-- REport Sidebar -->
+      <div style="position: absolute; right: 0; top: 0; z-index: 5" id="reportsidebar1">
+        <nav style="min-height: 790px; position: relative; padding-top: 10px; padding-left: 10px" id="reportsidebar" class="scrollabley">
+          <i class='fas fa-angle-left' style='font-size:32px; cursor: pointer;' onclick="closereport()"></i>
+          <div class="sidebar-header"></div>
+          <h1 style="text-align:center; margin-bottom: 42px; margin-top: 10px;">Create A Report</h1>
+          <div style="margin-left: 25px;">
+            <label>1) Select location with marker</label>
+            <br>
+            <br>
+            <br>
+            <label>2) Select a concern:</label>
+            <select style="width:92%" class="form-select" aria-label="Default select example" id="select1">
+              <option value="Crash">Crash</option>
+              <option value="Heavy Traffic">Heavy Traffic</option>
+              <option value="Traffic Hazard">Traffic Hazard</option>
+              <option value="Crime">Crime</option>
+              <option value="Other">Other</option>
+            </select>
+            <br><br>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">3) Comments:</label>
+              <textarea id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="10" style="width: 92%;"></textarea>
+            </div>
+          </div>
+
+          <button class="btn btn-dark btn-lg" 
+          style="width:60%; height:8%; position:relative; left:20%; margin-top: 50px;" type="button" id="sbmt">
+          <i>SUBMIT REPORT</i>
+          </button>
+        </nav>
+      </div>
 
     <!-- Weather -->
     <!-- When bus routes is enabled: [left: 995px] 
@@ -313,7 +326,23 @@
       <script src="weather.js"></script>
     </div>
 
+    <script src="./firebase.js"></script>
+
     <script>
+
+      function report() {
+        const reportsidebar = document.getElementById("reportsidebar");
+        reportsidebar.style.display = "block";
+        reportsidebar.classList.remove("animateout");
+        reportsidebar.classList.add("animatein");
+      }
+
+      function closereport() {
+        const reportsidebar = document.getElementById("reportsidebar");
+        reportsidebar.classList.remove("animatein");
+        reportsidebar.classList.add("animateout");
+        reportsidebar.style.display = "none";
+      }
 
       function busroutes() {
         const busroutebutton = document.getElementById("busRoutes");
@@ -363,12 +392,12 @@
       });
 
     </script>
+
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAMjkQjcToaXSIrGgAeGKDqO67qbq0EHk&callback=myMap">
     </script>
-    <script src="index.js" type="module"></script>
+    
     <script src="./parkingdistance.js"></script>
-    <script src="./firebase.js" type="module"></script>
 </body>
 
 </html>
