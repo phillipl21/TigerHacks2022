@@ -188,56 +188,77 @@ export function loadMarkers(map) {
         position: new google.maps.LatLng(38.93924968027523, -92.33125830703867),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Catalyst Café</h6>' + 
+            'Monday - Friday: <br>11:00 AM - 2:00 PM <br>4:00 PM - 6:00 PM'+
+            '<br>Saturday - Sunday: CLOSED',
           }),
       },
       { // Baja Grill - all student center
         position: new google.maps.LatLng(38.9426510787062, -92.32677505452564),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Bookmark Café</h6>' + 
+            'Monday - Wednesday: 10:30 AM - 7:00PM'+
+            '<br> Thursday: 10:30 AM - 5:00 PM'+
+            '<br> Friday: 10:30 AM - 3:00 PM'+
+            '<br>Saturday - Sunday: CLOSED',
           }),
       },
       { // Bookmark Cafe
         position: new google.maps.LatLng(38.94418563384068, -92.32707641542541),
         type: "coffee",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Bookmark Café</h6>' + 
+            'Monday - Wednesday: 7:30 AM - 8:00 PM'+
+            '<br> Thursday: 7:30 AM - 3:00 PM'+
+            '<br> Friday: 7:30 AM - 2:00 PM'+
+            '<br>Saturday - Sunday: CLOSED',
           }),
       },
       { // Catalyst Cafe
         position: new google.maps.LatLng(38.94330054002937, -92.32293193107311),
         type: "coffee",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Catalyst Café</h6>' + 
+            'Monday - Friday: 10:00 AM - 3:00 PM (CLOSED ON WEDNESDAY)'+
+            '<br>Saturday - Sunday: CLOSED',
           }),
       },
       { // Plaza
         position: new google.maps.LatLng(38.940941083043825, -92.32290955015037),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Plaza 900 Dining</h6>' + 
+            'Monday - Friday: <br>10:30 AM - 2:30 PM (Lunch)'+
+            '<br>4:30 PM - 8:00 PM (Dinner)'+
+            '<br>Saturday - Sunday: CLOSED',
           }),
       },
       { // Emporium
         position: new google.maps.LatLng(38.94095410407053, -92.32245364405318),
         type: "coffee",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Emporium</h6>' + 
+            'Monday - Friday: 7:00 AM - 9:00 PM'+
+            '<br>Saturday - Sunday: 12:00 PM - 9:00 PM',
           }),
       },
       { // Potential Energy Cafe
         position: new google.maps.LatLng(338.94620620812609, -92.32899852793562),
         type: "coffee",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Potential Energy Cafe</h6>' + 
+            'Monday - Friday: 7:45 AM - 1:30 PM'+
+            '<br>Saturday - Sunday: CLOSED',
           }),
       },
       { // Pizza/Breakfast @ MO
         position: new google.maps.LatLng(38.94187223621653, -92.3230511498501),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: '<h6 style="font-family">Pizza/Breakfast & MO</h6>' + 
+            '<br>Breakfast/Brunch:<br>Monday - Friday:7:00 AM - 10:15 AM<br>Saturday - Sunday:8:30 AM - 1:00 PM'+
+            '<br>Dinner:<br>Monday - Friday: 11:00 AM - 9:00 PM <br>Saturday - Sunday: 3:00 PM - 9:00 PM',
           }),
       },
       { // Sabai
