@@ -189,7 +189,7 @@ export function loadMarkers(map) {
         content: new google.maps.InfoWindow({
             content: 
             '<h6 style="font-family">Memorial Student Union</h6>' +
-            '<br><b>Monday - Friday</b>' +
+            '<body><b>Monday - Friday</b>' +
             '<br>7:00 am - 9:30 pm' +
             '<br><b>Saturday - Sunday</b>' +
             '<br>9:00 am - 9:30 pm</body>'
@@ -201,7 +201,7 @@ export function loadMarkers(map) {
         content: new google.maps.InfoWindow({
             content: 
             '<h6 style="font-family">MizzouRec</h6>' +
-            '<br><b>Monday - Thursday</b>' +
+            '<body><b>Monday - Thursday</b>' +
             '<br>5:30 am - 11:00 pm' +
             '<br><b>Friday</b>' +
             '<br>5:30 am - 8:00 pm' +
@@ -292,63 +292,101 @@ export function loadMarkers(map) {
         position: new google.maps.LatLng(38.94196266974219, -92.32443162448779),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Sabai</h6>' +
+            '<br><b>Monday - Saturday</b>' +
+            '<br>11:00 am - 9:00 pm' +
+            '<br><b>Sunday</b>' +
+            '<br>CLOSED</body>'
           }),
       },
       { // Starbucks Memorial
         position: new google.maps.LatLng(38.94529518466892, -92.32498666728256),
         type: "coffee",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Starbucks - Memorial Union</h6>' +
+            '<body><b>Monday - Wednesday</b>' +
+            '<br>7:00 am - 8:00 pm' + 
+            '<br><b>Thursday</b>' + 
+            '<br>7:00 am - 6:00 pm' +
+            '<br><b>Friday</b>' +
+            '<br>7:00 am - 5:00 pm' +
+            '<br><b>Saturday - Sunday</b>' +
+            '<br>10:00 am - 2:00 pm</body>'
           }),
       },
       { // Starbucks Southwest
         position: new google.maps.LatLng(38.938938, -92.332457),
         type: "coffee",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Starbucks - Southwest</h6>' +
+            '<body><b>Monday - Wednesday</b>' + '<br>8:00 am - 8:00 pm' +
+            '<br><b>Thursday - Friday</b>' + '<br>8:00 am - 5:00 pm' +
+            '<br><b>Saturday</b>' + '<br>10:00 am - 2:00 pm' +
+            '<br><b>Sunday</b>' + '<br>12:00 pm - 8:00 pm</body>'
           }),
       },
       { // Wheatstone
         position: new google.maps.LatLng(38.94530588977804, -92.325211),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Wheatstone</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>9:00 am - 1:30 pm' +
+            '<br><b>Saturday - Sunday</b>' + '<br>CLOSED</body>'
           }),
       },
       { // The Mark
         position: new google.maps.LatLng(38.94498218741994, -92.33246610226834),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">The Mark</h6>' +
+            '<body><b>Monday - Thursday</b>' + '<br>7:15 am - 10:00 am (Breakfast)' + '<br>11:00 am - 2:00 pm (Lunch)' + '<br>5:00 pm - 9:30 pm (Dinner)</body>' +
+            '<br><b>Friday</b>' + '<br>7:15 am - 10:00 am (Breakfast)' + '<br>11:00 am - 2:00 pm (Lunch)' + '<br>5:00 pm - 7:00 pm (Dinner)</body>' +
+            '<br><b>Saturday</b>' + '<br>11:00 am - 4:00 pm (Lunch)' + 
+            '<br><b>Sunday</b>' + '<br>11:00 am - 2:00 pm (Lunch)' + '<br>5:00 pm - 7:30 pm (Dinner)</body>'
           }),
       },
       { // mizzou mart southwest
         position: new google.maps.LatLng(38.939194355395756, -92.33251343790602),
         type: "shop",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Mizzou Market - Southwest</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>9:00 am - 11:00 pm' + 
+            '<br><b>Saturday - Sunday</b>' + '<br>11:00 am - 11:00 pm</body>'
           }),
       },
       { // mizzou mart hitt
         position: new google.maps.LatLng(38.9397704505007, -92.32550039911034),
         type: "shop",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Mizzou Market - Hitt Street</h6>' + 
+            '<body><b>Monday - Friday</b>' + '<br>7:30 am - 11:00 pm' +
+            '<br><b>Saturday - Sunday</b>' + '<br>11:00 am - 11:00 pm</body>'
           }),
       },
       { // subway hitt
         position: new google.maps.LatLng(38.9398131537622, -92.32570386921351),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
-          }),
+            content: 
+            '<h6 style="font-family">Subway - Hitt Street</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>9:00 am - 8:00 pm' +
+            '<br><b>Saturday - Sunday</b>' + '<br>11:00 am - 8:00 pm</body>'
+        }),
       },
       { // southwest subway
         position: new google.maps.LatLng(38.9389588333966, -92.33309603721887),
         type: "food",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Subway - Southwest</h6>' +
+            '<body><b>Monday - Sunday</b>' + '<br>11:00 am - 11:00 pm</body>'
           }),
       },
     ];
