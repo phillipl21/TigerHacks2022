@@ -1,3 +1,5 @@
+import { activateMarker } from "./loadMarkers.js";
+
 function distance(lat1, lon1, lat2, lon2) {
   var R = 6371; // Radius of the earth in km
   var dLat = (lat2 - lat1).toRad(); // Javascript functions in radians
@@ -225,15 +227,16 @@ export async function createParkingCards(map) {
     }
     for (let i = 0; i < parkinglotdistances.length; i++) {
       var card = document.getElementById("parking-card" + i.toString());
-      console.log(card);
       card.addEventListener("click", () => {
         console.log("debug");
-        map.setCenter(
+        map.setZoom(17);
+        map.panTo(
           new google.maps.LatLng(
             parkinglotdistances[i].lat,
             parkinglotdistances[i].long
           )
         );
+        activateMarker(map, parkinglotdistances[i].name);
       });
     }
   });
