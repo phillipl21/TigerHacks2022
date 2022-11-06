@@ -40,6 +40,7 @@
 </head>
 
 <body style="overflow-y: hidden;">
+  <script src="index.js" type="module"></script>
   <div style="height: 100%">
     <!-- Sidebar  -->
     <div style="position: absolute; z-index: 3">
@@ -265,12 +266,14 @@
         <nav style="min-height: 790px; position: relative; padding-top: 10px; padding-left: 10px" id="reportsidebar" class="scrollabley">
           <i class='fas fa-angle-left' style='font-size:32px; cursor: pointer;' onclick="closereport()"></i>
           <div class="sidebar-header"></div>
-          <br>
-          <h1 style="text-align:center; margin-bottom: 15px; margin-top: -10px;">Create A Report</h1>
-          <br>
+          <h1 style="text-align:center; margin-bottom: 42px; margin-top: 10px;">Create A Report</h1>
           <div style="margin-left: 25px;">
-            <label>Select a concern:</label>
-            <select style="width:92%" class="form-select" aria-label="Default select example">
+            <label>1) Select location with marker</label>
+            <br>
+            <br>
+            <br>
+            <label>2) Select a concern:</label>
+            <select style="width:92%" class="form-select" aria-label="Default select example" id="select1">
               <option value="Crash">Crash</option>
               <option value="Heavy Traffic">Heavy Traffic</option>
               <option value="Traffic Hazard">Traffic Hazard</option>
@@ -279,16 +282,15 @@
             </select>
             <br><br>
             <div class="form-group">
-              <label for="exampleFormControlTextarea1">Comments:</label>
-              <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" style="width: 92%;"></textarea>
+              <label for="exampleFormControlTextarea1">3) Comments:</label>
+              <textarea id="textarea" class="form-control" id="exampleFormControlTextarea1" rows="10" style="width: 92%;"></textarea>
             </div>
           </div>
 
-
           <button class="btn btn-dark btn-lg" 
-          style="width:60%; height:8%; position:relative; left:20%; margin-top: 50px;" type="button" onclick="submitreport()">
-          <i>SUBMIT REPORT</i> 
-        </button>
+          style="width:60%; height:8%; position:relative; left:20%; margin-top: 50px;" type="button" id="sbmt">
+          <i>SUBMIT REPORT</i>
+          </button>
         </nav>
       </div>
 
@@ -316,6 +318,8 @@
       <script src="weather.js"></script>
     </div>
 
+    <script src="./firebase.js"></script>
+
     <script>
 
       function report() {
@@ -326,13 +330,6 @@
       }
 
       function closereport() {
-        const reportsidebar = document.getElementById("reportsidebar");
-        reportsidebar.classList.remove("animatein");
-        reportsidebar.classList.add("animateout");
-        reportsidebar.style.display = "none";
-      }
-
-      function submitreport() {
         const reportsidebar = document.getElementById("reportsidebar");
         reportsidebar.classList.remove("animatein");
         reportsidebar.classList.add("animateout");
@@ -387,12 +384,12 @@
       });
 
     </script>
+
     <script
       src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAMjkQjcToaXSIrGgAeGKDqO67qbq0EHk&callback=myMap">
     </script>
-    <script src="index.js" type="module"></script>
+    
     <script src="./parkingdistance.js"></script>
-    <script src="./firebase.js" type="module"></script>
 </body>
 
 </html>

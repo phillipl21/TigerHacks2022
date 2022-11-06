@@ -30,6 +30,8 @@ async function initialize() {
     ],
   });
 
+  placeMarkerAndPanTo(new google.maps.LatLng(38.94, -92.32663), map);
+
   map.addListener("click", (e) => {
 
     placeMarkerAndPanTo(e.latLng, map);
@@ -38,6 +40,8 @@ async function initialize() {
     // console.log(e.latLng.lng())
     const latitude = markers[0].position.lat()
     const longitude = markers[0].position.lng()
+    localStorage.setItem("long", longitude);
+    localStorage.setItem("lat", latitude);
     // let info = document.getElementById("marker-info")
     // info.innerText = "Latitude: " + latitude + " | Longitude: " + longitude
     
@@ -85,6 +89,5 @@ function placeMarkerAndPanTo(latLng, map) {
 
 window.addEventListener("load", initialize);
 
-const longitude = markers[0].position.lng()
-const latitude = markers[0].position.lat()
-export {latitude, longitude}
+export const longitude = markers[0].position.lng()
+export const latitude = markers[0].position.lat()
