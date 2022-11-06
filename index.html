@@ -86,7 +86,7 @@
         </button>
 
         <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:3">
+        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:4">
           <div class="modal-dialog" role="document">
             <div class="modal-content">
               <div class="modal-header">
@@ -284,40 +284,28 @@
     <!-- When bus routes is enabled: [left: 995px] 
          When bus routes not enabled: [left: 1250px]
     -->
-    <div id="weather" style="float: right; position: absolute; z-index: 3; top: 1px; right: 400px;">
-      <div class="card border-warning mb-3 weathercard" style="max-width: 500px;">
-        <div class="row g-4">
-          <div class="col-md-4">
-            <img src="icons/03d.png" class="weather-icon" />
-          </div>
-
+    <div id="weather" style="float: right; position: absolute; z-index: 2.5; top: 1px; right: 400px;">
+      <div class="card border-warning mb-3 weathercard" style="max-width: 500px; cursor: initial;">
+          <div class="row g-4">
+              <div class="col-md-4">
+                  <img 
+                      src="icons/03d.png" 
+                      class="weather-icon" 
+                      style="height: 50px; width: 50px; position: absolute; top: 23px; left: 35px;" 
+                  />
+              </div>
+          
           <div class="col-md-7">
-
-            <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
-              <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
-              <p class="card-text" id="desc" style="font-size: small;">----</p>
-        <div class="card border-warning mb-3 weathercard" style="max-width: 500px;">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <img 
-                        src="icons/03d.png" 
-                        class="weather-icon" 
-                        style="height: 50px; width: 50px; position: absolute; top: 23px; left: 35px;" 
-                    />
-                </div>
-            
-            <div class="col-md-7">
-                
-                <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
-                    <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
-                    <p class="card-text" id="desc" style="font-size: small;">----</p>
-                </div>
-            </div>
+              
+              <div class="card-body" style="padding-top: 20%; margin-left: 10px;">
+                  <h6 style="margin-top: 6px;" class="card-title" id="temp">--°F</h6>
+                  <p class="card-text" id="desc" style="font-size: small;">----</p>
+              </div>
           </div>
-        </div>
+          </div>
       </div>
       <script src="weather.js"></script>
-    </div>
+  </div>
 
     <script>
 
