@@ -176,6 +176,116 @@ export async function createParkingCards(map) {
       lat: 38.94327220119762,
       long: -92.32583671801366,
     });
+    parkinglotdistances.push({
+      name: "Sixth and Cherry Garage",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9495549,
+        -92.3319585
+      ),
+      lat: 38.9495549,
+      long: -92.3319585,
+    });
+    parkinglotdistances.push({
+      name: "WG10",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9469902,
+        -92.3327713
+      ),
+      lat: 38.9469902,
+      long: -92.3327713,
+    });
+    parkinglotdistances.push({
+      name: "RC15",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9456114,
+        -92.3330497
+      ),
+      lat: 38.9456114,
+      long: -92.3330497,
+    });
+    parkinglotdistances.push({
+      name: "RC19",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9492519,
+        -92.3335829
+      ),
+      lat: 38.9492519,
+      long: -92.3335829,
+    });
+    parkinglotdistances.push({
+      name: "RC9",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9479949,
+        -92.3346699
+      ),
+      lat: 38.9479949,
+      long: -92.3346699,
+    });
+    parkinglotdistances.push({
+      name: "RC11",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9464558,
+        -92.3307481
+      ),
+      lat: 38.9464558,
+      long: -92.3307481,
+    });
+    parkinglotdistances.push({
+      name: "CG18",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9419589,
+        -92.3307481
+      ),
+      lat: 38.9419589,
+      long: -92.3307481,
+    });
+    parkinglotdistances.push({
+      name: "WC5",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9439034,
+        -92.327034
+      ),
+      lat: 38.9439034,
+      long: -92.327034,
+    });
+    parkinglotdistances.push({
+      name: "AV8",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9400889,
+        -92.3205019
+      ),
+      lat: 38.9400889,
+      long: -92.3205019,
+    });
+    parkinglotdistances.push({
+      name: "AV11",
+      distance: distance(
+        pos.coords.latitude,
+        pos.coords.longitude,
+        38.9399493,
+        -92.3199573
+      ),
+      lat: 38.9399493,
+      long: -92.3199573,
+    });
     parkinglotdistances.sort((a, b) => a.distance - b.distance);
 
     const lotinfo = {
