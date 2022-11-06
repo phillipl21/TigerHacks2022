@@ -6,7 +6,7 @@ TiGo is a web app that makes public transportation, parking details, and facilit
 
 What files do:
 parkingdistance.js: Runs the parking lot distance calculations with HTML Geolocation API to generate a sorted by distance list of parking lots<br/>
-firebase.js/. oadReports.js: Works with our Google Firebase database to load and update our reports. 
-loadMarkers.js/highlightRoutes.js: Utilizes the Google Maps API to call functions that work with our bus routes and necessary locations for all of the facilities and buildings. 
-weather.js: Utilizes OpenWeather API to get the temperature/weather at the given time and display it. 
-calculateArrivals.js: Runs algorithm to calculate and display the soonest bus stop for each bus route. 
+firebase.js/. oadReports.js: Works with our Google Firebase database to load and update our reports<br />
+loadMarkers.js/highlightRoutes.js: Utilizes the Google Maps API to call functions that work with our bus routes and necessary locations for all of the facilities and buildings<br />
+weather.js: Utilizes OpenWeather API to get the temperature/weather at the given time and display it<br /> 
+calculateArrivals.js: Runs algorithm to calculate and display the soonest bus stop for each bus route<br />
