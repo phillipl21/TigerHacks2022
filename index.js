@@ -1,5 +1,6 @@
 import { highlightRoutes, highlightRoute } from "./highlightRoutes.js";
 import { loadMarkers } from "./loadMarkers.js";
+import { createParkingCards } from "./parkingdistance.js";
 
 const BOUNDS = {
   north: 38.99,
@@ -43,5 +44,7 @@ function initialize() {
   document.getElementById("card-4").addEventListener("click", () => {
     highlightRoute(map, "polyline4");
   });
+
+  createParkingCards(map);
 }
 window.addEventListener("load", initialize);
