@@ -59,16 +59,15 @@ function distance(lat1, lon1, lat2, lon2) {
 
     for (let i=0; i<parkinglotdistances.length; i++) {
         parkingcards.innerHTML +=
-        `<div class="card front card-inverse">
-        <div class="card-img-overlay">
-          <h5 class="card-title" style="margin-top: -6px; color: black;">${parkinglotdistances[i].name}</h5>
-          <h6 style="color:black">${parkinglotdistances[i].distance.toFixed(2)} miles</h6>
-          <div style="font-size: 13px;">
-            <p class="card-text">${lotinfo[parkinglotdistances[i].name]}</p>
-          </div>
-        </div>
-      </div>`
-        
+        `<div class="card front card-inverse parkingcards">
+            <div class="card-img-overlay";">
+                <h5 class="card-title" style="margin-top: -6px; color: black;">${parkinglotdistances[i].name}</h5>
+                <h6 style="color:black">${parkinglotdistances[i].distance.toFixed(2)} miles</h6>
+                <div style="font-size: 13px;">
+                    <p class="card-text">${lotinfo[parkinglotdistances[i].name]}</p>
+                </div>
+            </div>
+        </div>`
     }
 });
 

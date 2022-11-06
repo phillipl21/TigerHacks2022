@@ -236,7 +236,7 @@
 
         <!-- Card -->
         <input type="checkbox" id="card-4" />
-        <label class="col-md-4 card-container" for='card-4' style="padding-bottom: 40px;">
+        <label class="col-md-4 card-container" for='card-4' style="padding-bottom: 20px;">
           <div class="card-flip">
             <!-- Card Front -->
             <div class="card front card-inverse">
@@ -279,7 +279,7 @@
           <div class="sidebar-header"></div>
           <br>
           <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
-          <div id="parkingcards">
+          <div style="margin-left: 15px;" id="parkingcards">
           </div>
         </nav>
       </div>
@@ -323,14 +323,17 @@
         if (busroutebutton.checked == false) {
           sidebarright.classList.remove("animatein");
           sidebarright.classList.add('animateout');
+          sidebarright.style.display="none";
         }
         else if (busroutebutton.checked == true) {
+          sidebarright.style.display="block";
           sidebarright.classList.remove('animateout');
           sidebarright.classList.add('animatein');
           sidebarparents.style.zIndex = 3;
         }
 
         if (parkingbutton.checked == false) {
+          sidebarright2.style.display="none";
           sidebarright2.classList.remove("animatein");
           sidebarright2.classList.add('animateout');
         }
