@@ -207,7 +207,7 @@ export async function createParkingCards(map) {
     console.log("checkpoint");
     for (let i = 0; i < parkinglotdistances.length; i++) {
       parkingcards.innerHTML +=
-        `<div class="card front card-inverse" id="parking-card` +
+        `<div class="card front card-inverse parkingcards" id="parking-card` +
         i.toString() +
         `">
         <div class="card-img-overlay">

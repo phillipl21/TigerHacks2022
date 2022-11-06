@@ -78,30 +78,10 @@
         <button id="place-marker" class="btn btn-dark btn-lg" style="width:80%; height:8%; position:relative; left:10%; top:30%">Place Marker</button>
 
         <button class="btn btn-dark btn-lg" 
-          style="width:80%; height:8%; position:relative; left:10%; top:30%" type="button" data-toggle="modal" data-target="#exampleModal">
+          style="width:80%; height:8%; position:relative; left:10%; top:30%" type="button" onclick="report()">
           <i>CREATE REPORT</i> 
         </button>
 
-        <!-- Modal -->
-        <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="z-index:4">
-          <div class="modal-dialog" role="document">
-            <div class="modal-content">
-              <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                  <span aria-hidden="true">&times;</span>
-                </button>
-              </div>
-              <div class="modal-body">
-                ...
-              </div>
-              <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Save changes</button>
-              </div>
-            </div>
-          </div>
-        </div>
         <div class="container" style="position: absolute; bottom: 0; right: 48px; text-align: center; cursor:default">
           <h4>STRIPES</h4>
           <h6 style="font-size: small;">muoslstripes@missouri.edu</h6>
@@ -268,7 +248,7 @@
     </div>
 
 
-      <!-- Parking Card -->
+      <!-- Parking Sidebar -->
       <div style="position: absolute; right: 0; top: 0; z-index: 3" id="rightsidebar2">
         <nav style="min-height: 790px" id="sidebar3" class="scrollabley">
           <div class="sidebar-header"></div>
@@ -276,6 +256,38 @@
           <h1 style="text-align:center; margin-bottom: 15px;">Parking</h1>
           <div style="margin-left: 15px;" id="parkingcards">
           </div>
+        </nav>
+      </div>
+
+      <!-- REport Sidebar -->
+      <div style="position: absolute; right: 0; top: 0; z-index: 5" id="reportsidebar1">
+        <nav style="min-height: 790px; position: relative; padding-top: 10px; padding-left: 10px" id="reportsidebar" class="scrollabley">
+          <i class='fas fa-angle-left' style='font-size:32px; cursor: pointer; color: black;' onclick="closereport()"></i>
+          <div class="sidebar-header"></div>
+          <br>
+          <h1 style="text-align:center; margin-bottom: 15px; margin-top: -10px;">Create A Report</h1>
+          <br>
+          <div style="margin-left: 25px;">
+            <label>Select a concern:</label>
+            <select style="width:92%" class="form-select" aria-label="Default select example">
+              <option value="0">Crash</option>
+              <option value="1">Heavy Traffic</option>
+              <option value="2">Traffic Hazard</option>
+              <option value="3">Crime</option>
+              <option value="4">Other</option>
+            </select>
+            <br><br>
+            <div class="form-group">
+              <label for="exampleFormControlTextarea1">Comments:</label>
+              <textarea class="form-control" id="exampleFormControlTextarea1" rows="10" style="width: 92%;"></textarea>
+            </div>
+          </div>
+
+
+          <button class="btn btn-dark btn-lg" 
+          style="width:60%; height:8%; position:relative; left:20%; top:30%" type="button" onclick="submitreport()">
+          <i>SUBMIT REPORT</i> 
+        </button>
         </nav>
       </div>
 
@@ -307,6 +319,27 @@
   </div>
 
     <script>
+
+      function report() {
+        const reportsidebar = document.getElementById("reportsidebar");
+        reportsidebar.style.display = "block";
+        reportsidebar.classList.remove("animateout");
+        reportsidebar.classList.add("animatein");
+      }
+
+      function closereport() {
+        const reportsidebar = document.getElementById("reportsidebar");
+        reportsidebar.classList.remove("animatein");
+        reportsidebar.classList.add("animateout");
+        reportsidebar.style.display = "none";
+      }
+
+      function submitreport() {
+        const reportsidebar = document.getElementById("reportsidebar");
+        reportsidebar.classList.remove("animatein");
+        reportsidebar.classList.add("animateout");
+        reportsidebar.style.display = "none";
+      }
 
       function busroutes() {
         const busroutebutton = document.getElementById("busRoutes");
