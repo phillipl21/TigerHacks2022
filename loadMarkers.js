@@ -160,28 +160,55 @@ export function loadMarkers(map) {
         position: new google.maps.LatLng(38.94440674595565, -92.32616446602765),
         type: "library",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Ellis Library</h6>' +
+            '<body><b>Sunday - Thursday</b>' +
+            '<br>12:00 am - 11:59 pm' +
+            '<br>Open 24 Hours (MU ID required from 10 pm to 7am)' +
+            '<br><b>Friday</b>' +
+            '<br>12:00 am - 8:00 pm' +
+            '<br><b>Saturday</b>' +
+            '<br>9:00 am - 5:00 pm</body>'
           }),
       },
       { // student center
         position: new google.maps.LatLng(38.9427984491364, -92.32667952779617),
         type: "person",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">MU Student Center</h6>' +
+            '<body><b>Saturday - Sunday</b>' +
+            '<br>9:00 am - 10:00 pm' +
+            '<br><b>Monday - Friday</b>' +
+            '<br>7:00 am - 10:00 pm</body>'
           }),
       },
       { // memorial union
         position: new google.maps.LatLng(38.945149299022134, -92.32507248098916),
         type: "person",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">Memorial Student Union</h6>' +
+            '<br><b>Monday - Friday</b>' +
+            '<br>7:00 am - 9:30 pm' +
+            '<br><b>Saturday - Sunday</b>' +
+            '<br>9:00 am - 9:30 pm</body>'
           }),
       },
       { // MizzouRec
         position: new google.maps.LatLng(38.9414198823737, -92.32644018517845),
         type: "weight",
         content: new google.maps.InfoWindow({
-            content: 'Test content',
+            content: 
+            '<h6 style="font-family">MizzouRec</h6>' +
+            '<br><b>Monday - Thursday</b>' +
+            '<br>5:30 am - 11:00 pm' +
+            '<br><b>Friday</b>' +
+            '<br>5:30 am - 8:00 pm' +
+            '<br><b>Saturday</b>' +
+            '<br>8:00 am - 8:00 pm' +
+            '<br><b>Sunday</b>' +
+            '<br>8:00 am - 11:00 pm</body>'
           }),
       },
       { // 1+5+3 Salads and Soups
@@ -352,4 +379,3 @@ export function loadMarkers(map) {
         });
     }
   }
-  
