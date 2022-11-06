@@ -407,37 +407,6 @@ export function loadMarkers(map) {
             '<b>Open 7 Days A Week</b>'
           }),
       },
-      //PARKING TIMES NOT CONFIRMED
-
-
-
-      { // RC19
-        position: new google.maps.LatLng(38.9488036,-92.3323641),
-        type: "parking",
-        content: new google.maps.InfoWindow({
-            content: 
-            '<h6 style="font-family">RC19 Parking Lot</h6>' +
-            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
-          }),
-      },
-      { // RC9
-        position: new google.maps.LatLng(38.9469902,-92.3327713),
-        type: "parking",
-        content: new google.maps.InfoWindow({
-            content: 
-            '<h6 style="font-family">RC9 Parking Lot</h6>' +
-            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
-          }),
-      },
-      { // RC11
-        position: new google.maps.LatLng(38.9469902,-92.3327713),
-        type: "parking",
-        content: new google.maps.InfoWindow({
-            content: 
-            '<h6 style="font-family">RC11 Parking Lot</h6>' +
-            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
-          }),
-      },
       { // WG10
         position: new google.maps.LatLng(38.9469902,-92.3327713),
         type: "parking",
@@ -447,8 +416,39 @@ export function loadMarkers(map) {
             '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
           }),
       },
+      //PARKING TIMES NOT CONFIRMED
+
+
+
+      { // RC19
+        position: new google.maps.LatLng(38.9492519,-92.3335829),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC19 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // RC9
+        position: new google.maps.LatLng(38.9479949,-92.3346699),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC9 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // RC11
+        position: new google.maps.LatLng(38.9464558,-92.3358569),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC11 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
       { // CG18
-        position: new google.maps.LatLng(38.9418467,-92.3288058),
+        position: new google.maps.LatLng(38.9419589,-92.3307481),
         type: "parking",
         content: new google.maps.InfoWindow({
             content: 
@@ -457,7 +457,7 @@ export function loadMarkers(map) {
           }),
       },
       { // WC5
-        position: new google.maps.LatLng(38.9418467,-92.3288058),
+        position: new google.maps.LatLng(38.9439034,-92.327034),
         type: "parking",
         content: new google.maps.InfoWindow({
             content: 
@@ -465,7 +465,24 @@ export function loadMarkers(map) {
             '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
           }),
       },
-
+      { // AV8
+        position: new google.maps.LatLng(38.9400889,-92.3205019),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">AV8 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // AV11
+        position: new google.maps.LatLng(38.9399493,-92.3199573),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">AV11 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
     ];
     
     var markers = [];
