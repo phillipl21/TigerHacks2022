@@ -52,12 +52,21 @@ export function loadMarkers(map) {
           '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
         }),
       },
+      { //WG16
+        position: new google.maps.LatLng(38.9433534,-92.3324172),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+          content: '<h6 style="font-family">WG16 Parking lot</h6>' + 
+          '<b>ASSIGNED STAFF ONLY' +
+          '<br>MONDAY - FRIDAY: 7:00 AM - 5:00 PM'
+        }),
+      },
       { //conley ave garage
         position: new google.maps.LatLng(38.94514490207793, -92.33158633772024),
         type: "parking",
         content: new google.maps.InfoWindow({
             content: '<h6 style="font-family">Conley Parking Garage</h6>' + 
-            '<body><b>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
+            '<body><br>Parking restrictions are enforced 7 a.m.-6 p.m., Monday-Friday.</body>'
           }),
       },
       { //turner ave garage
@@ -387,6 +396,100 @@ export function loadMarkers(map) {
             content: 
             '<h6 style="font-family">Subway - Southwest</h6>' +
             '<body><b>Monday - Sunday</b>' + '<br>11:00 am - 11:00 pm</body>'
+          }),
+      },
+      { // Sixth & Cherry Garage
+        position: new google.maps.LatLng(38.9495549,-92.3319585),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">Sixth & Cherry Garage</h6>' +
+            '<b>Open 7 Days A Week</b>'
+          }),
+      },
+      { // WG10
+        position: new google.maps.LatLng(38.9469902,-92.3327713),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC11 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      //PARKING TIMES NOT CONFIRMED
+
+
+
+      { // RC15
+        position: new google.maps.LatLng(38.9456114,-92.3330497),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC15 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // RC19
+        position: new google.maps.LatLng(38.9492519,-92.3335829),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC19 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // RC9
+        position: new google.maps.LatLng(38.9479949,-92.3346699),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC9 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // RC11
+        position: new google.maps.LatLng(38.9464558,-92.3358569),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">RC11 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // CG18
+        position: new google.maps.LatLng(38.9419589,-92.3307481),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">CG18 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // WC5
+        position: new google.maps.LatLng(38.9439034,-92.327034),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">WC5 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // AV8
+        position: new google.maps.LatLng(38.9400889,-92.3205019),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">AV8 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
+          }),
+      },
+      { // AV11
+        position: new google.maps.LatLng(38.9399493,-92.3199573),
+        type: "parking",
+        content: new google.maps.InfoWindow({
+            content: 
+            '<h6 style="font-family">AV11 Parking Lot</h6>' +
+            '<body><b>Monday - Friday</b>' + '<br>7:00 am - 6:00 pm</body>'
           }),
       },
     ];
